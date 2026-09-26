@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sampo AI OS — Sovereign Cognitive Architecture & Deterministic Execution</title>
+  <meta name="description" content="Sampo AI OS (Junior V2): Sovereign Local-First Multi-Agent Architecture with Deterministic AST Pre-flight Harness, 3-Tier Associative Memory, and Closed-Loop DPO Alignment.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F8FAF9;
+      --surface: #FFFFFF;
+      --surface-subtle: #F0F4F2;
+      --dark-card: #0A1410;
+      --dark-card-border: rgba(160, 226, 224, 0.18);
+      --text-main: #0F1713;
+      --text-muted: #52635A;
+      --nvidia-green: #76B900;
+      --gold: #C08A3E;
+      --gold-light: #FDF8F0;
+      --teal-accent: #0E7490;
+      --border-subtle: #E2E8E5;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 20px 40px -15px rgba(10, 20, 16, 0.08);
+      --shadow-hero: 0 25px 60px -12px rgba(10, 20, 16, 0.25);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Ambient Subtle Tech Gradient */
+    .ambient-header-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1200px;
+      height: 480px;
+      background: radial-gradient(circle at 50% 0%, rgba(118, 185, 0, 0.08) 0%, rgba(192, 138, 62, 0.04) 40%, rgba(248, 250, 249, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Modern Enterprise Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(248, 250, 249, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+    .pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--nvidia-green);
+      box-shadow: 0 0 10px var(--nvidia-green);
+    }
+    .nav-actions {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.90rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--text-main); }
+    .btn-contact {
+      background: var(--text-main);
+      color: #FFFFFF;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-contact:hover {
+      background: #23332B;
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 50px;
+      text-align: center;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+    }
+    .badge-pill span.green-txt { color: var(--nvidia-green); font-weight: 700; }
+    
+    h1 {
+      font-size: 3.6rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 22px;
+      max-width: 1040px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 span.highlight {
+      background: linear-gradient(135deg, #0F1713 30%, #0E7490 70%, var(--nvidia-green) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-lead {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin: 0 auto 38px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    .btn-hero {
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .btn-hero-primary {
+      background: var(--nvidia-green);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(118, 185, 0, 0.35);
+    }
+    .btn-hero-primary:hover {
+      background: #68A300;
+      transform: translateY(-2px);
+    }
+    .btn-hero-secondary {
+      background: var(--surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-hero-secondary:hover {
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+    }
+
+    /* Live Interface Showcase (The Hero Dark Frame on Bright Canvas) */
+    .showcase-container {
+      margin: 0 auto 90px;
+      max-width: 1160px;
+      position: relative;
+    }
+    .showcase-outer {
+      background: #050B08;
+      border-radius: 16px;
+      padding: 8px;
+      box-shadow: var(--shadow-hero);
+      border: 1px solid rgba(192, 138, 62, 0.35);
+      position: relative;
+    }
+    .showcase-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+    .metrics-bar {
+      margin-top: 14px;
+      background: #0C1712;
+      border-radius: 10px;
+      padding: 18px 28px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .metric-item-val {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #A0E2E0;
+    }
+    .metric-item-val.gold { color: #DDA758; }
+    .metric-item-val.green { color: var(--nvidia-green); }
+    .metric-item-lbl {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8FA89D;
+      margin-top: 2px;
+    }
+
+    /* Domain Breakthroughs Grid (Light Cards) */
+    .section-wrap {
+      padding: 60px 0 90px;
+    }
+    .heading-block {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 50px;
+    }
+    .heading-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.80rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal-accent);
+      margin-bottom: 10px;
+    }
+    .section-heading {
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .breakthrough-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+    .card-bt {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 36px 30px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-bt:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: #CBD5E1;
+    }
+    .card-icon-pill {
+      display: inline-flex;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+    .pill-green { background: #EBF8EC; color: #1E6B24; border: 1px solid #C4EBC7; }
+    .pill-teal { background: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
+    .pill-gold { background: var(--gold-light); color: #8C5B17; border: 1px solid #F6E2C2; }
+
+    .bt-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .bt-text {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .bt-meta {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    /* 4-Tier Stack & Harness Architecture (Dark Pro Section) */
+    .arch-dark-section {
+      background: #0A1410;
+      border-radius: 20px;
+      padding: 60px 50px;
+      color: #FFFFFF;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 90px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .arch-dark-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+    .arch-dark-header h3 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .arch-dark-header p {
+      color: #8FA89D;
+      font-size: 1rem;
+    }
+    .harness-box-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .h-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--dark-card-border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .h-num {
+      font-family: 'JetBrains Mono', monospace;
+      color: #DDA758;
+      font-size: 0.80rem;
+      margin-bottom: 8px;
+    }
+    .h-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    .h-desc {
+      font-size: 0.88rem;
+      color: #8FA89D;
+      line-height: 1.55;
+    }
+
+    /* Enterprise & Creator Strip */
+    .founder-strip {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 80px;
+      box-shadow: var(--shadow-sm);
+    }
+    .founder-info h4 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .founder-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .contact-box {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .contact-box .lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .contact-box a.mail {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--teal-accent);
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 40px 0;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      text-align: center;
+      background: var(--surface);
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 14px;
+    }
+    .footer-nav a { color: var(--text-main); text-decoration: none; font-weight: 600; }
+    .footer-nav a:hover { color: var(--teal-accent); }
+
+    @media (max-width: 960px) {
+      h1 { font-size: 2.6rem; }
+      .breakthrough-grid { grid-template-columns: 1fr; }
+      .metrics-bar { grid-template-columns: 1fr 1fr; }
+      .harness-box-grid { grid-template-columns: 1fr; }
+      .founder-strip { grid-template-columns: 1fr; padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-header-glow"></div>
+
+  <div class="container">
+    <header>
+      <a href="#" class="brand-mark">
+        <span class="pulse-dot"></span>
+        SAMPO AI OS // JUNIOR V2
+      </a>
+      <div class="nav-actions">
+        <a href="https://github.com/Sampo-AI-OS" target="_blank" class="nav-link">GitHub</a>
+        <a href="https://www.youtube.com/@TheSampoProtocol" target="_blank" class="nav-link">YouTube Studio</a>
+        <a href="https://www.linkedin.com/in/harri-lanzett-420800b2/" target="_blank" class="nav-link">LinkedIn Profile</a>
+        <a href="mailto:harri@sampoaios.com" class="btn-contact">Contact Architect</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="badge-pill">
+        <span class="green-txt">LOCAL-FIRST</span> • DETERMINISTIC EXECUTION HARNESS • AIR-GAPPED DISCOVERY
+      </div>
+      <h1>Sovereign Cognitive Architecture & <br><span class="highlight">Deterministic Multi-Agent Execution</span></h1>
+      <p class="hero-lead">
+        Sampo AI OS orchestrates localized reasoning models inside a hardened Zero-Trust execution harness. Built from first principles to unite in silico pharmacology, macroscopic climate modeling, and autonomous multi-agent cognition.
+      </p>
+      <div class="hero-actions">
+        <a href="mailto:harri@sampoaios.com?subject=Strategic%20Inquiry%20-%20Sampo%20AI%20OS" class="btn-hero btn-hero-primary">
+          Inquire Technical Cooperation
+        </a>
+        <a href="https://www.youtube.com/@TheSampoProtocol" target="_blank" class="btn-hero btn-hero-secondary">
+          ▶ Watch Deep-Dive Reasoning Vodcasts
+        </a>
+      </div>
+    </section>
+
+    <!-- Hero Showcase: Dark UI Frame Embedded in Crisp Bright Background -->
+    <div class="showcase-container">
+      <div class="showcase-outer">
+        <img src="/assets/Sampo_Junio_UI.jpeg" alt="Sampo AI OS Junior V2 Live Cognitive Workstation" class="showcase-img" onerror="this.src='Sampo_Junio_UI.jpeg'">
+        <div class="metrics-bar">
+          <div>
+            <div class="metric-item-val">10,146</div>
+            <div class="metric-item-lbl">Semantic Concept Nodes</div>
+          </div>
+          <div>
+            <div class="metric-item-val gold">70.3%</div>
+            <div class="metric-item-lbl">KV-Cache VRAM Savings</div>
+          </div>
+          <div>
+            <div class="metric-item-val green">203</div>
+            <div class="metric-item-lbl">Closed-Loop DPO Synapses</div>
+          </div>
+          <div>
+            <div class="metric-item-val">&lt; 0.001s</div>
+            <div class="metric-item-lbl">AST Pre-flight Gate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Domain Breakthroughs & Real World Deployments -->
+    <section class="section-wrap">
+      <div class="heading-block">
+        <div class="heading-tag">PROVEN SCIENTIFIC IMPACT</div>
+        <h2 class="section-heading">Cross-Disciplinary Discovery at Scale</h2>
+        <p class="section-desc">Sampo AI OS is already powering deterministic simulations across global macroeconomics and systems pharmacology.</p>
+      </div>
+
+      <div class="breakthrough-grid">
+        <!-- Card 1: Green Tech / Macroeconomics -->
+        <div class="card-bt">
+          <span class="card-icon-pill pill-green">Green Tech & Macro</span>
+          <h3 class="bt-title">The Hefaistos Platform</h3>
+          <p class="bt-text">
+            Integrated macro-assessment engine evaluating 153 national economies. Unifies physical carbon budgets (FaIR v2.2.4) with Computable General Equilibrium (CGE) macroeconomic modeling in collaboration with UN SDSN / AE4RIA.
+          </p>
+          <div class="bt-meta">
+            COLLABORATION: UN SDSN / AE4RIA
+          </div>
+        </div>
+
+        <!-- Card 2: Biotech / Systems Pharmacology -->
+        <div class="card-bt">
+          <span class="card-icon-pill pill-teal">BioTech & In Silico</span>
+          <h3 class="bt-title">Project Hygieia QSP</h3>
+          <p class="bt-text">
+            Quantitative Systems Pharmacology (QSP) workbench featuring a 4-compartment PBPK ODE solver (GI → Central → Peripheral → BBB) and Chou-Talalay combination synergy screening for multi-compound neuroprotection.
+          </p>
+          <div class="bt-meta">
+            PIPELINE: In Silico ODE & LNP Optim
+          </div>
+        </div>
+
+        <!-- Card 3: Deep Tech / Architecture -->
+        <div class="card-bt">
+          <span class="card-icon-pill pill-gold">Deep Tech & Sovereignty</span>
+          <h3 class="bt-title">Sovereign Data Fabric</h3>
+          <p class="bt-text">
+            Total on-premise execution with zero mandatory cloud telemetry. High-efficiency dynamic KV-cache quantization (Q8_0 window + Q4_0 tail) maintaining 0.9996 cosine attention fidelity on local edge silicon.
+          </p>
+          <div class="bt-meta">
+            RUNTIME: Edge Hardware / GGUF
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Technical Core: Dark Contrast Execution Harness -->
+    <div class="arch-dark-section">
+      <div class="arch-dark-header">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #DDA758; margin-bottom: 8px;">DETERMINISTIC GUARDRAILS</div>
+        <h3>The Multi-Tier Execution Harness</h3>
+        <p>Preventing model hallucinations and syntax decay from corrupting system state.</p>
+      </div>
+
+      <div class="harness-box-grid">
+        <div class="h-card">
+          <div class="h-num">TIER 01 // STATIC SECURITY</div>
+          <div class="h-title">Zero-Trust AST Pre-checker</div>
+          <div class="h-desc">
+            Performs static Python Abstract Syntax Tree analysis before execution. Forbids unauthorized syscalls, os/socket introspection, and sandbox escape routines before bytes enter the runtime.
+          </div>
+        </div>
+
+        <div class="h-card">
+          <div class="h-num">TIER 02 // ENVIRONMENT CONFINEMENT</div>
+          <div class="h-title">Dual-Engine Sandbox Runner</div>
+          <div class="h-desc">
+            Isolates execution inside unmapped non-root Docker containers (UID 1000, 2GB hard ceiling, --network none) with seamless fallback to isolated local virtual environments.
+          </div>
+        </div>
+
+        <div class="h-card">
+          <div class="h-num">TIER 03 // COGNITIVE RECOVERY</div>
+          <div class="h-title">ReAct Loop & Regex JSON Repair</div>
+          <div class="h-desc">
+            Absorbs prompt drift and syntax anomalies automatically via dynamic JSON extraction and repair routines, sustaining long-horizon reasoning loops without manual intervention.
+          </div>
+        </div>
+
+        <div class="h-card">
+          <div class="h-num">TIER 04 // CONTINUOUS ALIGNMENT</div>
+          <div class="h-title">Closed-Loop Local DPO Harvester</div>
+          <div class="h-desc">
+            Harvests developer feedback vectors (yw, yl) directly from reflection cycles, feeding an on-device Bradley-Terry preference loop to align local models without external re-training.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founder & Institution Strip -->
+    <div class="founder-strip">
+      <div class="founder-info">
+        <h4>Lansec Oy • Sampo Research Labs</h4>
+        <p>
+          Architected by <strong>Harri Lanzett</strong> in Helsinki / Vantaa, Finland. Dedicated to pushing the frontier of autonomous multi-agent operating systems, biological memory topologies, and sovereign edge computing.
+        </p>
+      </div>
+      <div class="contact-box">
+        <div class="lbl">STRATEGIC & ENTERPRISE COLLABORATION</div>
+        <a href="mailto:harri@sampoaios.com" class="mail">harri@sampoaios.com</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-nav">
+        <a href="https://github.com/Sampo-AI-OS" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/@TheSampoProtocol" target="_blank">YouTube Channel</a>
+        <a href="https://www.linkedin.com/in/harri-lanzett-420800b2/" target="_blank">LinkedIn Profile</a>
+        <a href="mailto:harri@sampoaios.com">Direct Email</a>
+      </div>
+      <div>© 2026 Lansec Oy • Sampo AI OS • Engineered for high-throughput sovereign cognitive workloads.</div>
+    </div>
+  </footer>
+</body>
+</html>
