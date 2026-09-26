@@ -505,22 +505,26 @@
     <div class="showcase-container">
       <div class="showcase-outer">
         <img src="/assets/Sampo_Junio_UI.jpeg" alt="Sampo AI OS Junior V2 Live Cognitive Workstation" class="showcase-img" onerror="this.src='Sampo_Junio_UI.jpeg'">
-        <div class="metrics-bar">
+        <div class="metrics-bar" style="grid-template-columns: repeat(5, 1fr);">
           <div>
             <div class="metric-item-val">10,146</div>
-            <div class="metric-item-lbl">Semantic Concept Nodes</div>
+            <div class="metric-item-lbl">Concept Nodes</div>
           </div>
           <div>
-            <div class="metric-item-val gold">70.3%</div>
-            <div class="metric-item-lbl">KV-Cache VRAM Savings</div>
+            <div class="metric-item-val gold">12,992</div>
+            <div class="metric-item-lbl">Graph Relations</div>
           </div>
           <div>
             <div class="metric-item-val green">203</div>
-            <div class="metric-item-lbl">Closed-Loop DPO Synapses</div>
+            <div class="metric-item-lbl">DPO Synapses</div>
           </div>
           <div>
-            <div class="metric-item-val">&lt; 0.001s</div>
-            <div class="metric-item-lbl">AST Pre-flight Gate</div>
+            <div class="metric-item-val" style="color: #E0F2FE;">47,745</div>
+            <div class="metric-item-lbl">DB Connections</div>
+          </div>
+          <div>
+            <div class="metric-item-val" style="color: var(--nvidia-green);">&lt; 0.001s</div>
+            <div class="metric-item-lbl">AST Security Gate</div>
           </div>
         </div>
       </div>
