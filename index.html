@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sampo AI OS — Sovereign Cognitive Architecture & Deterministic Execution</title>
-  <meta name="description" content="Sampo AI OS (Junior V2): Sovereign Local-First Multi-Agent Architecture with Deterministic AST Pre-flight Harness, 3-Tier Associative Memory, and Closed-Loop DPO Alignment.">
+  <title>Sampo AI OS — Sovereign Cognitive Architecture & Deterministic Research Portfolio</title>
+  <meta name="description" content="Sampo AI OS (Junior V2): Sovereign Local-First Multi-Agent Architecture with Deterministic AST Harness, Epigenetic DPO Learning, and Multi-Disciplinary Deep-Tech Research Portfolio.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -23,13 +23,14 @@
       --gold: #C08A3E;
       --gold-light: #FDF8F0;
       --teal-accent: #0E7490;
+      --teal-light: #E0F2FE;
       --border-subtle: #E2E8E5;
       --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
       --shadow-lg: 0 20px 40px -15px rgba(10, 20, 16, 0.08);
       --shadow-hero: 0 25px 60px -12px rgba(10, 20, 16, 0.25);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
@@ -39,15 +40,15 @@
       min-height: 100vh;
     }
 
-    /* Ambient Subtle Tech Gradient */
+    /* Ambient Subtle Tech Glow */
     .ambient-header-glow {
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 1200px;
-      height: 480px;
-      background: radial-gradient(circle at 50% 0%, rgba(118, 185, 0, 0.08) 0%, rgba(192, 138, 62, 0.04) 40%, rgba(248, 250, 249, 0) 70%);
+      width: 1240px;
+      height: 520px;
+      background: radial-gradient(circle at 50% 0%, rgba(118, 185, 0, 0.09) 0%, rgba(14, 116, 144, 0.05) 35%, rgba(192, 138, 62, 0.03) 60%, rgba(248, 250, 249, 0) 75%);
       pointer-events: none;
       z-index: 0;
     }
@@ -62,13 +63,13 @@
 
     /* Modern Enterprise Header */
     header {
-      padding: 24px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--border-subtle);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(248, 250, 249, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(248, 250, 249, 0.88);
+      backdrop-filter: blur(14px);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -93,24 +94,24 @@
     }
     .nav-actions {
       display: flex;
-      gap: 20px;
+      gap: 22px;
       align-items: center;
     }
     .nav-link {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.90rem;
+      font-size: 0.88rem;
       font-weight: 600;
       transition: color 0.2s;
     }
-    .nav-link:hover { color: var(--text-main); }
+    .nav-link:hover { color: var(--teal-accent); }
     .btn-contact {
       background: var(--text-main);
       color: #FFFFFF;
-      padding: 9px 20px;
+      padding: 8px 18px;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       text-decoration: none;
       transition: all 0.2s;
     }
@@ -121,7 +122,7 @@
 
     /* Hero Section */
     .hero {
-      padding: 80px 0 50px;
+      padding: 70px 0 45px;
       text-align: center;
     }
     .badge-pill {
@@ -137,19 +138,19 @@
       font-size: 0.78rem;
       font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       letter-spacing: 0.04em;
     }
     .badge-pill span.green-txt { color: var(--nvidia-green); font-weight: 700; }
     
     h1 {
-      font-size: 3.6rem;
+      font-size: 3.5rem;
       font-weight: 800;
       line-height: 1.15;
       letter-spacing: -0.03em;
       color: var(--text-main);
-      margin-bottom: 22px;
-      max-width: 1040px;
+      margin-bottom: 20px;
+      max-width: 1060px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -159,24 +160,24 @@
       -webkit-text-fill-color: transparent;
     }
     .hero-lead {
-      font-size: 1.25rem;
+      font-size: 1.20rem;
       color: var(--text-muted);
-      max-width: 820px;
-      margin: 0 auto 38px;
+      max-width: 840px;
+      margin: 0 auto 34px;
       font-weight: 400;
       line-height: 1.6;
     }
     .hero-buttons {
       display: flex;
-      gap: 16px;
+      gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
     .btn-hero {
-      padding: 14px 30px;
+      padding: 13px 26px;
       border-radius: 8px;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       text-decoration: none;
       display: inline-flex;
@@ -204,9 +205,9 @@
       transform: translateY(-2px);
     }
 
-    /* Live Interface Showcase (The Hero Dark Frame on Bright Canvas) */
+    /* Live Interface Showcase */
     .showcase-container {
-      margin: 0 auto 90px;
+      margin: 0 auto 80px;
       max-width: 1160px;
       position: relative;
     }
@@ -230,39 +231,40 @@
       border-radius: 10px;
       padding: 18px 28px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
       text-align: left;
       border: 1px solid rgba(255, 255, 255, 0.08);
       font-family: 'JetBrains Mono', monospace;
     }
     .metric-item-val {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: #A0E2E0;
     }
     .metric-item-val.gold { color: #DDA758; }
     .metric-item-val.green { color: var(--nvidia-green); }
     .metric-item-lbl {
-      font-size: 0.72rem;
+      font-size: 0.70rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: #8FA89D;
       margin-top: 2px;
     }
 
-    /* Domain Breakthroughs Grid (Light Cards) */
+    /* Section Typography & Wrappers */
     .section-wrap {
-      padding: 60px 0 90px;
+      padding: 60px 0 80px;
+      border-top: 1px solid var(--border-subtle);
     }
     .heading-block {
       text-align: center;
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto 50px;
     }
     .heading-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.80rem;
+      font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.12em;
@@ -281,72 +283,129 @@
       color: var(--text-muted);
     }
 
-    .breakthrough-grid {
+    /* Grid Layouts */
+    .grid-4-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+    .grid-3-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 60px;
+      gap: 24px;
+      margin-bottom: 40px;
     }
-    .card-bt {
+    .card-pro {
       background: var(--surface);
       border: 1px solid var(--border-subtle);
       border-radius: 14px;
-      padding: 36px 30px;
+      padding: 34px 30px;
       box-shadow: var(--shadow-sm);
       transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
-    .card-bt:hover {
+    .card-pro:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
       border-color: #CBD5E1;
     }
     .card-icon-pill {
       display: inline-flex;
-      padding: 6px 12px;
+      padding: 5px 12px;
       border-radius: 6px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       width: fit-content;
     }
     .pill-green { background: #EBF8EC; color: #1E6B24; border: 1px solid #C4EBC7; }
     .pill-teal { background: #E0F2FE; color: #0369A1; border: 1px solid #BAE6FD; }
     .pill-gold { background: var(--gold-light); color: #8C5B17; border: 1px solid #F6E2C2; }
+    .pill-blue { background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; }
 
-    .bt-title {
-      font-size: 1.3rem;
+    .card-title {
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--text-main);
       margin-bottom: 12px;
       line-height: 1.3;
     }
-    .bt-text {
-      font-size: 0.94rem;
+    .card-text {
+      font-size: 0.92rem;
       color: var(--text-muted);
       line-height: 1.6;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       flex-grow: 1;
     }
-    .bt-meta {
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 16px;
+    .kpi-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: var(--surface-subtle);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.76rem;
-      color: var(--text-muted);
+    }
+    .kpi-val { font-weight: 700; color: var(--text-main); }
+    .kpi-lbl { color: var(--text-muted); font-size: 0.70rem; }
+
+    .card-actions-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 18px;
+    }
+    .btn-action-sm {
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .btn-action-primary {
+      background: var(--text-main);
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+    .btn-action-primary:hover { background: var(--teal-accent); }
+    .btn-action-secondary {
+      background: var(--surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+    .btn-action-secondary:hover { border-color: #94A3B8; background: var(--surface-subtle); }
+    .btn-action-yt {
+      background: #FEF2F2;
+      color: #DC2626;
+      border: 1px solid #FECACA;
+    }
+    .btn-action-yt:hover {
+      background: #DC2626;
+      color: #FFFFFF;
+      border-color: #DC2626;
     }
 
-    /* 4-Tier Stack & Harness Architecture (Dark Pro Section) */
+    /* Dark Technical Architecture Section */
     .arch-dark-section {
       background: #0A1410;
       border-radius: 20px;
       padding: 60px 50px;
       color: #FFFFFF;
       box-shadow: var(--shadow-lg);
-      margin-bottom: 90px;
+      margin-bottom: 80px;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
     .arch-dark-header {
@@ -373,62 +432,119 @@
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--dark-card-border);
       border-radius: 12px;
-      padding: 28px;
+      padding: 26px;
     }
     .h-num {
       font-family: 'JetBrains Mono', monospace;
       color: #DDA758;
-      font-size: 0.80rem;
+      font-size: 0.78rem;
       margin-bottom: 8px;
     }
     .h-title {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-weight: 700;
       color: #FFFFFF;
       margin-bottom: 10px;
     }
     .h-desc {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: #8FA89D;
       line-height: 1.55;
     }
 
-    /* Enterprise & Creator Strip */
+    /* Applied Showcase Cards */
+    .mini-project-card {
+      background: var(--surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+    .mini-project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: #CBD5E1;
+    }
+    .mini-p-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .mini-p-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .mini-p-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .mini-p-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .mini-p-link {
+      color: var(--teal-accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .mini-p-link:hover { text-decoration: underline; }
+    .mini-p-link-yt {
+      color: #DC2626;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .mini-p-link-yt:hover { text-decoration: underline; color: #B91C1C; }
+
+    /* Founder Strip */
     .founder-strip {
       background: var(--surface);
       border: 1px solid var(--border-subtle);
       border-radius: 16px;
-      padding: 44px;
+      padding: 40px;
       display: grid;
       grid-template-columns: 1.4fr 1fr;
-      gap: 40px;
+      gap: 36px;
       align-items: center;
-      margin-bottom: 80px;
+      margin-bottom: 70px;
       box-shadow: var(--shadow-sm);
     }
     .founder-info h4 {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 800;
       margin-bottom: 8px;
     }
     .founder-info p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       line-height: 1.6;
     }
     .contact-box {
       background: var(--surface-subtle);
       border: 1px solid var(--border-subtle);
       border-radius: 12px;
-      padding: 24px;
+      padding: 22px;
       text-align: center;
     }
     .contact-box .lbl {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--text-muted);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .contact-box a.mail {
       font-family: 'JetBrains Mono', monospace;
@@ -442,7 +558,7 @@
     footer {
       border-top: 1px solid var(--border-subtle);
       padding: 40px 0;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
       text-align: center;
       background: var(--surface);
@@ -450,18 +566,98 @@
     .footer-nav {
       display: flex;
       justify-content: center;
-      gap: 28px;
+      gap: 26px;
       margin-bottom: 14px;
     }
     .footer-nav a { color: var(--text-main); text-decoration: none; font-weight: 600; }
     .footer-nav a:hover { color: var(--teal-accent); }
 
+    /* Slide Deck Modal Viewer */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(5, 11, 8, 0.88);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #0A1410;
+      border: 1px solid rgba(192, 138, 62, 0.4);
+      border-radius: 14px;
+      width: 90vw;
+      max-width: 1080px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+    }
+    .modal-body {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .slide-viewer-img {
+      max-width: 100%;
+      max-height: 68vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .modal-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: #060D0A;
+    }
+    .btn-slide-nav {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 8px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      transition: all 0.2s;
+    }
+    .btn-slide-nav:hover { background: var(--nvidia-green); color: #050B08; }
+    .close-btn {
+      color: #8FA89D;
+      cursor: pointer;
+      font-size: 1.4rem;
+      background: none;
+      border: none;
+    }
+    .close-btn:hover { color: #FFFFFF; }
+
     @media (max-width: 960px) {
-      h1 { font-size: 2.6rem; }
-      .breakthrough-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.5rem; }
+      .grid-4-cards { grid-template-columns: 1fr; }
+      .grid-3-cards { grid-template-columns: 1fr; }
       .metrics-bar { grid-template-columns: 1fr 1fr; }
       .harness-box-grid { grid-template-columns: 1fr; }
-      .founder-strip { grid-template-columns: 1fr; padding: 28px; }
+      .founder-strip { grid-template-columns: 1fr; padding: 26px; }
     }
   </style>
 </head>
@@ -472,28 +668,30 @@
     <header>
       <a href="#" class="brand-mark">
         <span class="pulse-dot"></span>
-        SAMPO AI OS // JUNIOR V2
+        SAMPO AI OS // RESEARCH &amp; INNOVATION
       </a>
       <div class="nav-actions">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#cognitive-core" class="nav-link">Cognitive Core</a>
+        <a href="#portfolio" class="nav-link">Flagship Portfolio</a>
+        <a href="#applied-suite" class="nav-link">Applied Systems</a>
         <a href="https://github.com/Sampo-AI-OS" target="_blank" class="nav-link">GitHub</a>
-        <a href="https://www.youtube.com/@TheSampoProtocol" target="_blank" class="nav-link">YouTube Studio</a>
-        <a href="https://www.linkedin.com/in/harri-lanzett-420800b2/" target="_blank" class="nav-link">LinkedIn Profile</a>
         <a href="mailto:harri@sampoaios.com" class="btn-contact">Contact Architect</a>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="overview">
       <div class="badge-pill">
-        <span class="green-txt">LOCAL-FIRST</span> • GLOBAL WORKSPACE THEORY (GWT) • SELF-EVOLVING COGNITION
+        <span class="green-txt">LOCAL-FIRST</span> • GLOBAL WORKSPACE THEORY • DEEP-TECH DISCOVERY ENGINE
       </div>
-      <h1>Sovereign Cognitive OS & <br><span class="highlight">Self-Evolving Metacognition</span></h1>
+      <h1>Sovereign Cognitive OS &amp; <br><span class="highlight">Multi-Disciplinary Research Engine</span></h1>
       <p class="hero-lead">
-        Sampo AI OS (Junior V2) is a local, brain-inspired operating system built on Global Workspace Theory. Featuring continuous epigenetic learning, 3-tier associative memory consolidation, and deterministic AST execution harnesses.
+        Sampo AI OS (Junior V2) unites Bernard Baars' Global Workspace Theory with deterministic execution harnesses. Powering sovereign breakthroughs across real-time water intelligence, planetary macroeconomics, and in silico pharmacology.
       </p>
-      <div class="hero-actions">
-        <a href="mailto:harri@sampoaios.com?subject=Strategic%20Inquiry%20-%20Sampo%20AI%20OS" class="btn-hero btn-hero-primary">
-          Inquire Technical Cooperation
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn-hero btn-hero-primary">
+          Explore Research Portfolio
         </a>
         <a href="https://www.youtube.com/@TheSampoProtocol" target="_blank" class="btn-hero btn-hero-secondary">
           ▶ Follow Junior's Evolution on YouTube
@@ -505,22 +703,22 @@
     <div class="showcase-container">
       <div class="showcase-outer">
         <img src="Junior_Live_UI.jpeg" alt="Sampo AI OS Junior V2 Live Cognitive Workstation" class="showcase-img" onerror="this.src='/assets/Junior_Live_UI.jpeg'">
-        <div class="metrics-bar" style="grid-template-columns: repeat(5, 1fr);">
+        <div class="metrics-bar">
           <div>
-            <div class="metric-item-val">10,146</div>
+            <div class="metric-item-val">10,484</div>
             <div class="metric-item-lbl">Concept Nodes</div>
           </div>
           <div>
-            <div class="metric-item-val gold">12,992</div>
+            <div class="metric-item-val gold">13,472</div>
             <div class="metric-item-lbl">Graph Relations</div>
           </div>
           <div>
-            <div class="metric-item-val green">203</div>
-            <div class="metric-item-lbl">DPO Synapses</div>
+            <div class="metric-item-val green">2,988</div>
+            <div class="metric-item-lbl">Calibrated DPO Synapses</div>
           </div>
           <div>
-            <div class="metric-item-val" style="color: #E0F2FE;">47,745</div>
-            <div class="metric-item-lbl">DB Connections</div>
+            <div class="metric-item-val" style="color: #E0F2FE;">49,898</div>
+            <div class="metric-item-lbl">Structured Facts</div>
           </div>
           <div>
             <div class="metric-item-val" style="color: var(--nvidia-green);">&lt; 0.001s</div>
@@ -531,82 +729,265 @@
     </div>
 
     <!-- The Living Cognitive Core: What Makes Junior Unique -->
-    <section class="section-wrap">
+    <section class="section-wrap" id="cognitive-core">
       <div class="heading-block">
         <div class="heading-tag">THE LIVING COGNITIVE ARCHITECTURE</div>
-        <h2 class="section-heading">How Junior Thinks, Remembers & Evolves</h2>
-        <p class="section-desc">Unlike stateless cloud wrappers or fragmented agent loops, Sampo AI OS implements genuine bio-digital metacognition.</p>
+        <h2 class="section-heading">How Junior Thinks, Remembers &amp; Evolves</h2>
+        <p class="section-desc">Unlike stateless cloud wrappers or fragile prompt chains, Sampo AI OS implements genuine bio-digital metacognition.</p>
       </div>
 
-      <div class="breakthrough-grid">
+      <div class="grid-3-cards">
         <!-- Pillar 1: GWT Conscious Spotlight -->
-        <div class="card-bt">
+        <div class="card-pro">
           <span class="card-icon-pill pill-green">Cognitive Neuroscience</span>
-          <h3 class="bt-title">Global Workspace (GWT)</h3>
-          <p class="bt-text">
+          <h3 class="card-title">Global Workspace (GWT)</h3>
+          <p class="card-text">
             Based on Bernard Baars’ conscious spotlight theory. Rather than chaotic parallel chats, specialized sub-agents (<em>Planner → Analytical Thinker → Critic → Executor</em>) coordinate via a central AGI bus, ensuring single-focus execution and zero context decay.
           </p>
-          <div class="bt-meta">
-            CORE: Single-Focus Conscious Bus
+          <div class="kpi-row">
+            <div><span class="kpi-val">Sequential</span><div class="kpi-lbl">Conscious Spotlight</div></div>
+            <div><span class="kpi-val">Zero-Leakage</span><div class="kpi-lbl">AGI Message Bus</div></div>
           </div>
         </div>
 
         <!-- Pillar 2: Epigenetic Self-Evolution & Error Diary -->
-        <div class="card-bt">
+        <div class="card-pro">
           <span class="card-icon-pill pill-gold">Continuous DPO Learning</span>
-          <h3 class="bt-title">Self-Evolving Metacognition</h3>
-          <p class="bt-text">
-            Junior logs every friction point and Critic rejection into a structured <code>error_diary.jsonl</code>. It applies <strong>Dynamic Pitfall Injection</strong> on new tasks and autonomously synthesizes its own DPO preference pairs to evolve its source code and reasoning patterns over time.
+          <h3 class="card-title">Self-Evolving Metacognition</h3>
+          <p class="card-text">
+            Junior logs every friction point into <code>error_diary.jsonl</code>. The automated <strong>DPO Harvester Daemon</strong> retroactively extracts Bradley-Terry preference pairs, training over 2,980 samples (loss 0.6397, reward margin 1.9071) to eliminate recurring mistakes.
           </p>
-          <div class="bt-meta">
-            EVOLUTION: Autonomous Code & Logic Growth
+          <div class="kpi-row">
+            <div><span class="kpi-val">2,988 Pairs</span><div class="kpi-lbl">Calibrated Synapses</div></div>
+            <div><span class="kpi-val">+1.907 Margin</span><div class="kpi-lbl">Bradley-Terry Delta</div></div>
           </div>
         </div>
 
         <!-- Pillar 3: 3-Tier Mycelium Memory & Sleep Consolidation -->
-        <div class="card-bt">
+        <div class="card-pro">
           <span class="card-icon-pill pill-teal">Hippocampal Model</span>
-          <h3 class="bt-title">Tri-Tier Associative Memory</h3>
-          <p class="bt-text">
-            Combines volatile Working Memory (STM with mathematical anti-contamination decay), chronological Episodic LTM, and a 10k+ node Neocortical Semantic Knowledge Graph that abstracts and consolidates relationships during idle/sleep cycles.
+          <h3 class="card-title">Tri-Tier Associative Memory</h3>
+          <p class="card-text">
+            Combines volatile Working Memory (STM with mathematical anti-contamination decay), chronological Episodic LTM, and a 10,480+ node Neocortical Semantic Knowledge Graph with automated orphan pruning during idle/sleep cycles.
           </p>
-          <div class="bt-meta">
-            RETRIEVAL: GraphRAG + Sleep Consolidation
+          <div class="kpi-row">
+            <div><span class="kpi-val">10,484 Nodes</span><div class="kpi-lbl">Neocortical Graph</div></div>
+            <div><span class="kpi-val">Autonomous</span><div class="kpi-lbl">Sleep Pruning Pass</div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Standalone Breakthrough Platforms Engineered with Sampo -->
-    <section class="section-wrap" style="padding-top: 0;">
+    <!-- SECTION: THE 4 DEEP-TECH RESEARCH FLAGSHIPS -->
+    <section class="section-wrap" id="portfolio">
       <div class="heading-block">
-        <div class="heading-tag">APPLIED PORTFOLIO</div>
-        <h2 class="section-heading">Breakthrough Platforms Built with Sampo AI OS</h2>
+        <div class="heading-tag">STRATEGIC RESEARCH &amp; FLAGSHIP PLATFORMS</div>
+        <h2 class="section-heading">Four Deep-Tech Breakthroughs Engineered with Sampo</h2>
         <p class="section-desc">Independent research platforms and domain engines architected and accelerated via Junior's cognitive reasoning pipeline.</p>
       </div>
 
-      <div class="breakthrough-grid" style="grid-template-columns: repeat(2, 1fr);">
-        <!-- Card 1: Green Tech / Macroeconomics -->
-        <div class="card-bt">
-          <span class="card-icon-pill pill-green">Green Tech & Macroeconomics</span>
-          <h3 class="bt-title">The Hefaistos Platform</h3>
-          <p class="bt-text">
-            A standalone macroeconomic policy assessment platform evaluating 153 national economies. Unifies physical carbon budgets (FaIR v2.2.4) with Computable General Equilibrium (CGE) macroeconomic modeling in collaboration with UN SDSN / AE4RIA.
+      <div class="grid-4-cards">
+        <!-- Flagship 1: WaterPrism -->
+        <div class="card-pro">
+          <span class="card-icon-pill pill-blue">CleanTech &amp; Water AI</span>
+          <h3 class="card-title">WaterPrism Intelligence</h3>
+          <p class="card-text">
+            Real-time multi-hazard water intelligence fusing UK EA Flood API, FMI WFS, and bias-corrected ERA5 reanalysis across 9 gauge nodes. Features concurrent flood, drought (FAO-56 ET0), and ecological quality risk modules with autonomous PPO reinforcement learning asset control.
           </p>
-          <div class="bt-meta">
-            INDEPENDENT PLATFORM: UN SDSN / AE4RIA Global Hub
+          <div class="kpi-row">
+            <div><span class="kpi-val">503,808 Steps</span><div class="kpi-lbl">PPO Agent Training</div></div>
+            <div><span class="kpi-val">6 Global Nodes</span><div class="kpi-lbl">UN GDACS Threat Feeds</div></div>
+          </div>
+          <div class="card-actions-row">
+            <button onclick="openSlideDeck('waterprism')" class="btn-action-sm btn-action-primary">
+              ▶ View 8-Slide Research Deck
+            </button>
+            <a href="Portfolio/WaterPrism/WaterPrism_Technical_Whitepaper_2026.pdf" target="_blank" class="btn-action-sm btn-action-secondary">
+              📄 Whitepaper PDF
+            </a>
+            <a href="https://www.youtube.com/@TheSampoProtocol" target="_blank" class="btn-action-sm btn-action-yt">
+              🎧 YouTube Series ↗
+            </a>
           </div>
         </div>
 
-        <!-- Card 2: Biotech / Systems Pharmacology -->
-        <div class="card-bt">
-          <span class="card-icon-pill pill-teal">BioTech & In Silico</span>
-          <h3 class="bt-title">Project Hygieia QSP</h3>
-          <p class="bt-text">
-            A standalone Quantitative Systems Pharmacology (QSP) workbench featuring a 4-compartment PBPK ODE solver (GI → Central → Peripheral → BBB) and Chou-Talalay combination synergy screening for multi-compound neuroprotection.
+        <!-- Flagship 2: The Hefaistos Platform -->
+        <div class="card-pro">
+          <span class="card-icon-pill pill-green">Macroeconomics &amp; Climate</span>
+          <h3 class="card-title">The Hefaistos Platform</h3>
+          <p class="card-text">
+            Planetary macroeconomic policy assessment engine evaluating 153 national economies. Unifies physical carbon budgets (FaIR v2.2.4) with Computable General Equilibrium (CGE) macroeconomic modeling in formal collaboration with UN SDSN / AE4RIA.
           </p>
-          <div class="bt-meta">
-            INDEPENDENT PLATFORM: In Silico ODE & LNP Optim
+          <div class="kpi-row">
+            <div><span class="kpi-val">153 Nations</span><div class="kpi-lbl">CGE Macro Modeling</div></div>
+            <div><span class="kpi-val">UN SDSN / AE4RIA</span><div class="kpi-lbl">Global Climate Hub</div></div>
+          </div>
+          <div class="card-actions-row">
+            <button onclick="openSlideDeck('hefaistos')" class="btn-action-sm btn-action-primary">
+              ▶ View 20-Slide Research Deck
+            </button>
+            <a href="Portfolio/The Hefaistos/hefaistos_whitepaper.pdf" target="_blank" class="btn-action-sm btn-action-secondary">
+              📄 Whitepaper PDF
+            </a>
+            <a href="https://www.youtube.com/watch?v=qDTpnfumSDQ&t=6s" target="_blank" class="btn-action-sm btn-action-yt">
+              🎧 Watch Episode (0:06) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Flagship 3: Project Hygieia -->
+        <div class="card-pro">
+          <span class="card-icon-pill pill-teal">BioTech &amp; In Silico</span>
+          <h3 class="card-title">Project Hygieia QSP</h3>
+          <p class="card-text">
+            Quantitative Systems Pharmacology (QSP) workbench featuring a 4-compartment PBPK ODE solver (GI → Central → Peripheral → BBB) and Chou-Talalay combination synergy screening (CI &lt; 1.0) for multi-compound botanical neuroprotection.
+          </p>
+          <div class="kpi-row">
+            <div><span class="kpi-val">4-Compartment</span><div class="kpi-lbl">PBPK ODE Kinetics</div></div>
+            <div><span class="kpi-val">Chou-Talalay</span><div class="kpi-lbl">Synergy Matrix (CI&lt;1)</div></div>
+          </div>
+          <div class="card-actions-row">
+            <button onclick="openSlideDeck('hygieia')" class="btn-action-sm btn-action-primary">
+              ▶ View 13-Slide Botanical Deck
+            </button>
+            <a href="Portfolio/Hygieia/The_Hygieia_APA_7th_Manuscript_60D_Clean.pdf" target="_blank" class="btn-action-sm btn-action-secondary">
+              📄 APA 7th Manuscript
+            </a>
+            <a href="https://www.youtube.com/watch?v=ilT8Y_8gEgQ" target="_blank" class="btn-action-sm btn-action-yt">
+              🎧 Watch Episode ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Flagship 4: Sampo AI OS Core -->
+        <div class="card-pro">
+          <span class="card-icon-pill pill-gold">Deep Tech &amp; Sovereignty</span>
+          <h3 class="card-title">Sampo AI OS (Junior V2)</h3>
+          <p class="card-text">
+            Sovereign, local-first metacognitive operating system with AST execution harnesses and zero mandatory cloud telemetry. Rapid sub-500ms VRAM release, offline DPO calibration, and 100% air-gapped intellectual property protection.
+          </p>
+          <div class="kpi-row">
+            <div><span class="kpi-val">&lt; 500 ms</span><div class="kpi-lbl">Model Lifecycle Unload</div></div>
+            <div><span class="kpi-val">0.00 €</span><div class="kpi-lbl">Marginal Inference Cost</div></div>
+          </div>
+          <div class="card-actions-row">
+            <button onclick="openSlideDeck('sampo_os')" class="btn-action-sm btn-action-primary">
+              ▶ View 8-Slide Architecture Deck
+            </button>
+            <a href="technical_whitepaper.md" target="_blank" class="btn-action-sm btn-action-secondary">
+              📄 Technical Whitepaper (v2.5)
+            </a>
+            <a href="https://www.youtube.com/watch?v=ZIRI0-IznmE" target="_blank" class="btn-action-sm btn-action-yt">
+              🎧 Watch S2E5 Breakdown ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: APPLIED SYSTEMS & GITHUB SHOWCASE MATRIX -->
+    <section class="section-wrap" id="applied-suite">
+      <div class="heading-block">
+        <div class="heading-tag">APPLIED SYSTEMS &amp; DECENTRALIZED GOVERNANCE</div>
+        <h2 class="section-heading">Public Showcase Repositories</h2>
+        <p class="section-desc">Production-grade modular architectures, smart contract nodes, and autonomous risk tools engineered for specialized enterprise deployments — featured in Season 1 developer deep dives on <a href="https://www.youtube.com/@TheSampoProtocol" target="_blank" style="color: var(--teal-accent); font-weight:600; text-decoration: underline;">The Sampo Protocol YouTube Channel ↗</a>.</p>
+      </div>
+
+      <div class="grid-3-cards">
+        <!-- Card 1 -->
+        <div class="mini-project-card">
+          <span class="card-icon-pill pill-gold" style="margin-bottom: 12px;">Geopolitics &amp; Risk</span>
+          <div class="mini-p-title">DAO Geopolitical Risk Scrambler</div>
+          <div class="mini-p-desc">
+            Autonomous multi-source conflict indicator scraper, supply chain route vulnerability heatmapper, and real-time maritime choke point risk aggregator.
+          </div>
+          <div class="mini-p-footer">
+            <span>FastAPI • NetworkX</span>
+            <div class="mini-p-links">
+              <a href="https://github.com/Sampo-AI-OS/dao-geopolitical-risk-scrambler" target="_blank" class="mini-p-link">GitHub ↗</a>
+              <a href="https://www.youtube.com/watch?v=bSV9iIsna48&t=80s" target="_blank" class="mini-p-link-yt">🎧 Video Demo (1:20) ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="mini-project-card">
+          <span class="card-icon-pill pill-green" style="margin-bottom: 12px;">Clean Energy &amp; ESG</span>
+          <div class="mini-p-title">DAO Renewable Energy Trading</div>
+          <div class="mini-p-desc">
+            Decentralized peer-to-peer microgrid energy exchange engine with dynamic smart contract settlement and solar/wind predictive generation modeling.
+          </div>
+          <div class="mini-p-footer">
+            <span>Solidity • Docker</span>
+            <div class="mini-p-links">
+              <a href="https://github.com/Sampo-AI-OS/dao-renewable-energy-trading" target="_blank" class="mini-p-link">GitHub ↗</a>
+              <a href="https://www.youtube.com/watch?v=drLtuiQ4HCU&t=25s" target="_blank" class="mini-p-link-yt">🎧 Video Demo (0:25) ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="mini-project-card">
+          <span class="card-icon-pill pill-teal" style="margin-bottom: 12px;">Quantum &amp; Cryptography</span>
+          <div class="mini-p-title">Quantum Identity Protocol</div>
+          <div class="mini-p-desc">
+            Post-quantum cryptographic identity verification module featuring Kyber/Dilithium lattice-based signatures and zero-knowledge attribute proofs.
+          </div>
+          <div class="mini-p-footer">
+            <span>Rust • Python • ZK</span>
+            <div class="mini-p-links">
+              <a href="https://github.com/Sampo-AI-OS/dao-quantum-identity-protocol" target="_blank" class="mini-p-link">GitHub ↗</a>
+              <a href="https://www.youtube.com/watch?v=8VBGdZmdQ2k&t=359s" target="_blank" class="mini-p-link-yt">🎧 Video Demo (5:59) ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="mini-project-card">
+          <span class="card-icon-pill pill-gold" style="margin-bottom: 12px;">Mining &amp; Satellite ESG</span>
+          <div class="mini-p-title">Mining ESG &amp; Gold Intelligence</div>
+          <div class="mini-p-desc">
+            Multi-spectral satellite sensor validation for extraction compliance, tailings dam integrity, and real-time mineral market quantitative forecasting.
+          </div>
+          <div class="mini-p-footer">
+            <span>Earth Engine • PyTorch</span>
+            <div class="mini-p-links">
+              <a href="https://github.com/Sampo-AI-OS/dao-mining-esg-monitor" target="_blank" class="mini-p-link">GitHub ↗</a>
+              <a href="https://www.youtube.com/watch?v=wSAnwDjNxL4&t=26s" target="_blank" class="mini-p-link-yt">🎧 Video Demo (0:26) ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="mini-project-card">
+          <span class="card-icon-pill pill-blue" style="margin-bottom: 12px;">AI Alignment &amp; Ethics</span>
+          <div class="mini-p-title">AI Ethics OS &amp; Voting Engine</div>
+          <div class="mini-p-desc">
+            Autonomous multi-agent constitutional ethics validator with quadratic voting governance, formal ethical axiom checking, and safety auditing.
+          </div>
+          <div class="mini-p-footer">
+            <span>Constitutional AI</span>
+            <div class="mini-p-links">
+              <a href="https://github.com/Sampo-AI-OS/ai-ethics-os" target="_blank" class="mini-p-link">GitHub ↗</a>
+              <a href="https://www.youtube.com/watch?v=l5VHToY1vGI&t=214s" target="_blank" class="mini-p-link-yt" title="English Analysis">🎧 Video (ENG 3:34) ↗</a>
+              <a href="https://www.youtube.com/watch?v=kXEIIaxyJYg&t=532s" target="_blank" class="mini-p-link-yt" title="Suomenkielinen katsaus">🎧 (FIN 8:52) ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="mini-project-card">
+          <span class="card-icon-pill pill-green" style="margin-bottom: 12px;">Environmental Telemetry</span>
+          <div class="mini-p-title">Weather Drone &amp; Fractal Scope</div>
+          <div class="mini-p-desc">
+            Edge-computed environmental micro-sensing telemetry with nonlinear fractal attractor analysis for atmospheric turbulence and storm prediction.
+          </div>
+          <div class="mini-p-footer">
+            <span>Edge Silicon • MQTT</span>
+            <div class="mini-p-links">
+              <a href="https://github.com/Sampo-AI-OS/weather-drone" target="_blank" class="mini-p-link">GitHub ↗</a>
+              <a href="https://www.youtube.com/watch?v=drLtuiQ4HCU&t=924s" target="_blank" class="mini-p-link-yt">🎧 Video Demo (15:24) ↗</a>
+            </div>
           </div>
         </div>
       </div>
@@ -639,24 +1020,24 @@
 
         <div class="h-card">
           <div class="h-num">TIER 03 // COGNITIVE RECOVERY</div>
-          <div class="h-title">ReAct Loop & Regex JSON Repair</div>
+          <div class="h-title">ReAct Loop &amp; Regex JSON Repair</div>
           <div class="h-desc">
             Absorbs prompt drift and syntax anomalies automatically via dynamic JSON extraction and repair routines, sustaining long-horizon reasoning loops without manual intervention.
           </div>
         </div>
 
         <div class="h-card">
-          <div class="h-num">TIER 04 // CONTINUOUS ALIGNMENT</div>
-          <div class="h-title">Closed-Loop Local DPO Harvester</div>
+          <div class="h-num">TIER 04 // CONTINUOUS HARVESTING</div>
+          <div class="h-title">Closed-Loop DPO Harvester Daemon</div>
           <div class="h-desc">
-            Harvests developer feedback vectors (yw, yl) directly from reflection cycles, feeding an on-device Bradley-Terry preference loop to align local models without external re-training.
+            Continuously harvests execution friction vectors directly from error logs, feeding an on-device Bradley-Terry preference loop (2,988 pairs calibrated) to align local models without external re-training.
           </div>
         </div>
       </div>
     </div>
 
     <!-- Founder & Institution Strip -->
-    <div class="founder-strip">
+    <div class="founder-strip" id="contact">
       <div class="founder-info">
         <h4>Lansec Oy • Sampo Research Labs</h4>
         <p>
@@ -664,8 +1045,29 @@
         </p>
       </div>
       <div class="contact-box">
-        <div class="lbl">STRATEGIC & ENTERPRISE COLLABORATION</div>
+        <div class="lbl">STRATEGIC &amp; RESEARCH INQUIRIES</div>
         <a href="mailto:harri@sampoaios.com" class="mail">harri@sampoaios.com</a>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">
+          https://sampoaios.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Slide Viewer Modal -->
+  <div id="slideModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="slideModalTitle">Presentation Viewer</span>
+        <button class="close-btn" onclick="closeSlideModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="slideImg" src="" alt="Slide View" class="slide-viewer-img">
+      </div>
+      <div class="modal-controls">
+        <button class="btn-slide-nav" onclick="prevSlide()">◀ Previous</button>
+        <span id="slideCounter" style="color: #8FA89D; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem;">Slide 1 of 21</span>
+        <button class="btn-slide-nav" onclick="nextSlide()">Next ▶</button>
       </div>
     </div>
   </div>
@@ -681,5 +1083,79 @@
       <div>© 2026 Lansec Oy • Sampo AI OS • Engineered for high-throughput sovereign cognitive workloads.</div>
     </div>
   </footer>
+
+  <script>
+    // Slide Deck Modal Controller
+    const decks = {
+      waterprism: {
+        title: "WaterPrism — Physics-Informed Hydro-Intelligence (8 Slides)",
+        prefix: "Portfolio/WaterPrism/WaterPrism_Hydro_Intelligence_-_Slide_",
+        indices: [1, 2, 3, 4, 5, 6, 7, 8]
+      },
+      hefaistos: {
+        title: "The Hefaistos — Calibrating Climate Reality (20 Slides)",
+        prefix: "Portfolio/The Hefaistos/DIA Study/Calibrating_Climate_Reality_-_Slide_",
+        indices: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+      },
+      hygieia: {
+        title: "Project Hygieia — Synergistic Botanical Architecture (13 Slides)",
+        prefix: "Portfolio/Hygieia/DIAT/Synergistic_Botanical_Architecture_-_Slide_",
+        indices: [2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+      },
+      sampo_os: {
+        title: "Sampo AI OS — Sovereign Metacognitive Architecture (8 Slides)",
+        prefix: "Portfolio/Sampo AI OS/Sampo_AI_OS_-_Slide_",
+        indices: [1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    };
+
+    let currentDeckKey = null;
+    let currentSlideIdx = 0;
+
+    function openSlideDeck(deckKey) {
+      if (!decks[deckKey]) return;
+      currentDeckKey = deckKey;
+      currentSlideIdx = 0;
+      updateSlideView();
+      document.getElementById('slideModal').style.display = 'flex';
+    }
+
+    function closeSlideModal() {
+      document.getElementById('slideModal').style.display = 'none';
+    }
+
+    function updateSlideView() {
+      const deck = decks[currentDeckKey];
+      const slideNum = deck.indices[currentSlideIdx];
+      const imgPath = `${deck.prefix}${slideNum}.png`;
+      document.getElementById('slideImg').src = imgPath;
+      document.getElementById('slideModalTitle').innerText = deck.title;
+      document.getElementById('slideCounter').innerText = `Slide ${currentSlideIdx + 1} of ${deck.indices.length}`;
+    }
+
+    function nextSlide() {
+      const deck = decks[currentDeckKey];
+      if (currentSlideIdx < deck.indices.length - 1) {
+        currentSlideIdx++;
+        updateSlideView();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlideIdx > 0) {
+        currentSlideIdx--;
+        updateSlideView();
+      }
+    }
+
+    // Keyboard arrow keys for slide navigation
+    window.addEventListener('keydown', (e) => {
+      if (document.getElementById('slideModal').style.display === 'flex') {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'Escape') closeSlideModal();
+      }
+    });
+  </script>
 </body>
 </html>
