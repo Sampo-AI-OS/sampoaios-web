@@ -1,85 +1,103 @@
-# Sampo AI OS — Sovereign Cognitive Architecture & Deep-Tech Research Laboratory
+# Sampo AI OS & Harri Lanzett — Sovereign Cognitive Architecture & Deep-Tech Research Laboratory
 
-> Sampo AI OS (Junior V2) is a sovereign, local-first multi-agent cognitive operating system uniting Bernard Baars' Global Workspace Theory (GWT) with deterministic Abstract Syntax Tree (AST) execution harnesses, dynamic GraphRAG knowledge persistence, and continuous on-device Direct Preference Optimization (DPO).
+> **Harri Lanzett** is a **Principal AI Systems Architect**, **Autonomous Agentic Systems Lead**, and **Deep Tech Founder**.
+> *"I build sovereign, locally executed, production-grade multi-agent systems engineered for operational autonomy, deterministic security, and high information value."*
 
-- **Architect & Principal Investigator:** Harri Lanzett
+- **Principal Investigator & Founder:** Harri Lanzett
+- **Key Roles:** Principal AI Systems Architect • Autonomous Agentic Systems Lead • Deep Tech System Builder & Founder
 - **Institutional Affiliation:** Lansec Oy / Sampo AI Research Laboratory, Helsinki / Vantaa, Finland
-- **Official Website:** https://sampoaios.com
+- **Official Domain:** https://sampoaios.com
 - **Research Hub:** https://sampoaios.com/research.html
 - **GitHub Organization:** https://github.com/Sampo-AI-OS
-- **YouTube Technical Series:** https://www.youtube.com/@TheSampoProtocol
+- **YouTube Series:** https://www.youtube.com/@TheSampoProtocol
+- **LinkedIn Profile:** https://www.linkedin.com/in/harri-lanzett-420800b2/
+- **Direct Contact:** harri@sampoaios.com
 
 ---
 
-## Core Cognitive System Architecture
+## Strategic Focus & Frontier Competencies
 
-- **Global Workspace (GWT):** Multi-agent coordination bus implementing a conscious spotlight (*Planner → Analytical Thinker → Adversarial Critic → Motor Executor*), eliminating token crosstalk and context drift.
-- **Tripartite Mycelium Memory:** 
-  1. Working Memory (STM) with mathematical exponential half-life decay.
-  2. Chronological Episodic Long-Term Memory (audit ledger).
-  3. Neocortical Semantic Knowledge Graph (GraphRAG) with 10,484 concept nodes and 13,472 relational edges with automated sleep-cycle orphan pruning.
-- **Deterministic Multi-Tier Execution Harness:**
-  - Tier 1: Static Python AST Security Gate (< 1.0 ms latency, blocking unauthorized syscalls).
-  - Tier 2: Non-root container confinement (UID 1000, 2GB memory ceiling, `--network none`).
-  - Tier 3: Dynamic JSON envelope heuristics and regex AST grammar repair.
-  - Tier 4: Closed-Loop DPO Harvester Daemon (2,988 calibrated Bradley-Terry pairs, loss 0.6397, delta margin +1.9071).
-- **Inference Runtime:** Model-agnostic local quantized swarm (`llama.cpp` / GGUF) with sub-500ms VRAM unload and zero marginal inference cost (0.00 €), interoperable with frontier cloud APIs (Gemini 1.5/3.7) via dynamic in-context memory injection.
+- **Core Focus:** Transforming complex scientific, mathematical, and strategic business challenges into operational, audited, and investable TRL 5–6 solutions.
+- **Specialization & Core Disciplines:**
+  1. **Multi-Agent Orchestration:** Global Workspace Theory (GWT) cognitive buses, conscious spotlight routing, and custom Model Context Protocol (MCP) tool bindings.
+  2. **Local-First LLM Infrastructure:** Sovereign air-gapped runtimes, zero-marginal inference costs (0.00 €), model-agnostic local quantized swarms (GGUF/llama.cpp), and guaranteed zero cloud telemetry leaks.
+  3. **Deterministic Execution Harnesses:** Static Python Abstract Syntax Tree (AST) pre-execution verification (< 1ms), strict container sandboxing (UID 1000, non-root, `--network none`), and automated syntactic self-healing.
+  4. **GraphRAG & Bio-Digital Memory:** Tripartite Mycelium Memory uniting exponential half-life Working Memory (STM), immutable chronological Episodic Ledgers, and Neocortical Semantic Knowledge Graphs with automated sleep-cycle pruning.
 
 ---
 
-## Peer-Reviewed Publications, Whitepapers & Case Studies
+## Track Record (0 → 1): Four Flagship Breakthrough Platforms
 
-### 1. The Cognitive Harness: Deterministic Guardrails, Knapsack Token Budgets and Autonomous Self-Tightening
-- **Document Identifier:** `SAMPO-CH-2026-V1.0`
-- **Publication Date:** October 2026
-- **Author:** Harri Lanzett
-- **URL:** https://sampoaios.com/THE_COGNITIVE_HARNESS_CASE_STUDY.pdf
-- **Key Contributions:** Case study on preventing LLM context window saturation through dynamic Knapsack token budget allocation and sub-1ms static AST syntax gates.
+### 1. Sampo AI OS (Junior V2) — Sovereign Cognitive Operating System
+- **Category:** Sovereign Deep Tech & Air-Gapped AGI Infrastructure
+- **Value Proposition:** Sovereign, air-gapped AI operating system engineered for enterprise intellectual property protection and autonomous software engineering. Eliminates cloud data leaks, vendor lock-in, and recurring API token costs by running local foundational models with deterministic AST security harnesses, offline DPO preference learning, and guaranteed zero external telemetry.
+- **Key Papers:**
+  - *The Cognitive Harness Case Study (October 2026)*: https://sampoaios.com/THE_COGNITIVE_HARNESS_CASE_STUDY.pdf
+  - *Autonomous Software Engineering Whitepaper (October 2026)*: https://sampoaios.com/SAMPO_AI_OS_V2_AUTONOMOUS_ENGINEERING_WHITEPAPER.pdf
+  - *Bio-Digital Metacognition APA 7th Manuscript*: https://sampoaios.com/Junior_Metacognitive_Architecture_APA_7th_Manuscript.md
 
-### 2. Sampo AI OS V2: Autonomous Software Engineering & Sovereign Cognitive OS Architecture
-- **Document Identifier:** `SAMPO-AE-2026-V2.0`
-- **Publication Date:** October 2026
-- **Author:** Harri Lanzett
-- **URL:** https://sampoaios.com/SAMPO_AI_OS_V2_AUTONOMOUS_ENGINEERING_WHITEPAPER.pdf
-- **Key Contributions:** Full specification of sovereign multi-agent OS architecture for air-gapped enterprise software refactoring and intellectual property protection.
+### 2. The Hefaistos Platform — Planetary Macroeconomic Policy & Climate Stress-Testing
+- **Category:** Macroeconomics & Climate Transition Modeling
+- **Collaboration:** Formally benchmarked and aligned with UN SDSN / AE4RIA Global Climate Hub.
+- **Value Proposition:** Planetary-scale macroeconomic decision engine for national climate policy and investment stress-testing. Evaluates 153 national economies by unifying physical carbon budget limits (FaIR v2.2.4) with multi-sector Computable General Equilibrium (CGE) simulation—empowering governments, central banks, and global sovereign funds to de-risk net-zero transitions, energy mandates, and fiscal trade balances.
+- **Key Papers & Reports:**
+  - *The Hefaistos Technical Whitepaper*: https://sampoaios.com/The%20Hefaistos/hefaistos_whitepaper.pdf
+  - *UN SDSN Global Climate Hub Official Report (September 2026)*: https://unsdsn.globalclimatehub.org/wp-content/uploads/2026/09/SDSNGCH_Global-Report.pdf
 
-### 3. The Cognitive Harness: Model-Agnostic Infrastructure, Deterministic AST Guardrails, and Epigenetic DPO Orchestration
-- **Document Identifier:** `CIP-AGI-DEF-2026-09-28`
-- **Publication Date:** September 2026
-- **Authors:** Harri Lanzett & Sampo AI OS Core Cognitive Architecture
-- **URL:** https://sampoaios.com/Junior_Metacognitive_Architecture_APA_7th_Manuscript.md
-- **Key Contributions:** APA 7th Edition manuscript establishing the *Infrastructure-First Thesis of AGI*. Empirical benchmark results: 100% schema validity, 95.55% GraphRAG associative recall at 14.70 ms latency, and 100% execution pitfall avoidance.
+### 3. WaterPrism Intelligence — Multi-Hazard Hydro-Intelligence & Decision Governance
+- **Category:** CleanTech, Digital Water Management & Autonomous Infrastructure
+- **Scientific Target:** Technical Submission to *Cambridge Prisms: Water* (Cambridge University Press, April 2026).
+- **Value Proposition:** Autonomous multi-hazard water intelligence and infrastructure decision-support platform engineered for river catchments (River Cam validation, Cambridge, UK) and global water security. Deploys a unified reinforcement-learning engine (PPO, 503k steps) to concurrently manage flood surges (48–168h lead time), drought stress (FAO-56 Penman–Monteith), and ecological water quality (EU WFD standards)—coupling real-time UK EA & FMI sensor fusion with autonomous 5-D sluice/pump control, ethical governance audit trails, and global geopolitical water threat tracking (UN/JRC GDACS).
+- **Official Whitepapers:**
+  - *WaterPrism Technical White Paper (10 Pages, 2026)*: https://sampoaios.com/WaterPrism_Technical_Whitepaper_2026.pdf
+  - *Digital Water Management & Governance Report*: https://sampoaios.com/WaterPrism_Digital_Water_Management_Governance.pdf
 
-### 4. The Hygieia: Autonomous In Silico Systems Pharmacology, Multi-Carrier Formulation Discovery & Deterministic Lead Optimization Platform
-- **Document Identifier:** `HYG-WP-2026-V2.0`
-- **Publication Date:** September 2026
-- **Author:** Harri Lanzett
-- **URL:** https://sampoaios.com/Portfolio/Hygieia/The_Hygieia_APA_7th_Manuscript_60D_Clean.pdf
-- **Markdown Specification:** https://sampoaios.com/Portfolio/Hygieia/The_Hygieia_White_Paper_2026.md
-- **Key Contributions:** Model-Informed Drug Development (MIDD) and ASME V&V 40 Context of Use. Stiff 6-compartment PBPK ODE solver (Gut → Portal → Liver → Plasma → BBB → Brain), target-mediated drug disposition (TMDD), and Chou-Talalay combinatorial synergy quantification ($CI < 0.70$) across multi-carrier matrices (topical DMSO, piperine, lipid nanoparticles).
-
-### 5. The Hefaistos Platform: Planetary Macroeconomic Policy Assessment & 153-Nation Carbon Budget Modeling
-- **Document Identifier:** `HEF-WP-2026-V1.0`
-- **Publication Date:** September 2026
-- **Author:** Harri Lanzett (in formal collaboration with UN SDSN / AE4RIA Global Climate Hub)
-- **URL:** https://sampoaios.com/The%20Hefaistos/hefaistos_whitepaper.pdf
-- **Official UN SDSN Report:** https://unsdsn.globalclimatehub.org/wp-content/uploads/2026/09/SDSNGCH_Global-Report.pdf
-- **Key Contributions:** Macroeconomic Computable General Equilibrium (CGE) policy simulation coupled with the FaIR v2.2.4 physical carbon impulse model across 153 national economies.
-
-### 6. WaterPrism Intelligence: Physics-Informed Hydro-Intelligence & Real-Time Multi-Hazard Mitigation
-- **Document Identifier:** `WP-TR-2026-V1.0`
-- **Publication Date:** September 2026
-- **Author:** Harri Lanzett
-- **URL:** https://sampoaios.com/WaterPrism_Technical_Whitepaper_2026.pdf
-- **Key Contributions:** Real-time stream telemetry across 9 gauge nodes fusing UK Environment Agency Flood API, Finnish Meteorological Institute (FMI WFS), and ECMWF ERA5 reanalysis with autonomous Proximal Policy Optimization (PPO, 503,808 steps) reinforcement learning weir control.
+### 4. The Hygieia Platform v2.1 — In Silico Systems Pharmacology & Combinatorial Lead Discovery
+- **Category:** BioTech & In Silico Systems Pharmacology
+- **Regulatory Framework:** US FDA Model-Informed Drug Development (MIDD) & ASME V&V 40 Computational Standard.
+- **Value Proposition:** Autonomous in silico systems pharmacology and combinatorial drug discovery engine that de-risks preclinical R&D by 80%. Replaces 10–15 year wet-lab trial-and-error by mathematically identifying patentable super-additive therapeutic synergies (Chou-Talalay CI < 0.70), predicting free blood-brain barrier (BBB) penetration via stiff 12-state PBPK ODE solvers, and optimizing targeted multi-carrier delivery vectors.
+- **Official Whitepapers:**
+  - *The Hygieia White Paper (12 Pages, 2026 PDF)*: https://sampoaios.com/The_Hygieia_White_Paper_2026.pdf
+  - *Interactive HTML Edition*: https://sampoaios.com/The_Hygieia_White_Paper_2026.html
 
 ---
 
-## Applied Systems & Public Repositories
+## Production-Grade Public Showcase Repositories
 
-- **DAO Geopolitical Risk Scrambler:** https://github.com/Sampo-AI-OS/dao-geopolitical-risk-scrambler
-- **DAO Renewable Energy Trading:** https://github.com/Sampo-AI-OS/dao-renewable-energy-trading
-- **Quantum Identity Protocol:** https://github.com/Sampo-AI-OS/dao-quantum-identity-protocol
-- **Mining ESG & Satellite Monitor:** https://github.com/Sampo-AI-OS/dao-mining-esg-monitor
-- **AI Ethics OS & Voting Engine:** https://github.com/Sampo-AI-OS/ai-ethics-os
-- **Weather Drone & Telemetry Scope:** https://github.com/Sampo-AI-OS/weather-drone
+1. **DAO Geopolitical Risk Scrambler** (FastAPI • NetworkX • OSINT):
+   Autonomous multi-source conflict indicator engine and maritime choke point vulnerability heatmapper. Analyzes geopolitical threat vectors across critical global trade corridors (Red Sea, Hormuz, Malacca) using graph-network centrality scoring to forecast cargo disruptions and trigger automated supply chain hedging.
+   Repository: https://github.com/Sampo-AI-OS/dao-geopolitical-risk-scrambler
+
+2. **DAO Renewable Energy Trading** (Solidity • Web3 • FastAPI • Docker):
+   Decentralized peer-to-peer (P2P) renewable energy settlement engine for distributed microgrids. Eliminates utility intermediary fees and curtailment waste through dynamic Solidity smart contract settlement, automated battery arbitrage, and localized solar/wind generation forecasting.
+   Repository: https://github.com/Sampo-AI-OS/dao-renewable-energy-trading
+
+3. **Quantum Identity Protocol** (Rust • Python • NIST ML-KEM/DSA • ZK):
+   Sovereign zero-trust identity verification engine engineered for post-quantum threat environments ("harvest now, decrypt later"). Combines NIST-standardized Kyber/Dilithium lattice-based signatures with zero-knowledge attribute proofs for quantum-resistant enterprise authentication.
+   Repository: https://github.com/Sampo-AI-OS/dao-quantum-identity-protocol
+
+4. **Mining ESG & Satellite Intelligence** (Earth Engine • PyTorch • Sentinel SAR):
+   Continuous multi-spectral satellite Earth observation engine for mine concession monitoring and tailings dam structural integrity. Fuses Sentinel-1/2 SAR displacement radar with quantitative mineral yield modeling to detect sub-millimeter dam deformation and automate regulatory ESG compliance.
+   Repository: https://github.com/Sampo-AI-OS/dao-mining-esg-monitor
+
+5. **AI Ethics OS & Voting Engine** (Constitutional AI • Quadratic Voting • AST):
+   Deterministic multi-agent constitutional ethics validator and quadratic voting governance framework. Audits autonomous agent reasoning against machine-readable moral axioms and EU AI Act high-risk requirements, guaranteeing verifiable compliance and audit trails before action dispatch.
+   Repository: https://github.com/Sampo-AI-OS/ai-ethics-os
+
+6. **Autonomous Weather Drone Telemetry** (Edge Silicon • Embedded C++ • MQTT):
+   Autonomous edge-computed micro-meteorological sensing and aerial telemetry node for hyper-local boundary-layer dynamics. Streams real-time atmospheric pressure gradients, localized turbulence vectors, and storm precursors to de-risk commercial drone logistics, precision agriculture, and wind turbine fleets.
+   Repository: https://github.com/Sampo-AI-OS/weather-drone
+
+---
+
+## Canonical Citation Format
+
+```bibtex
+@article{lanzett2026sampoaios,
+  title={Sampo AI OS: Sovereign Local-First Multi-Agent Cognitive Architecture & Deterministic Research Portfolio},
+  author={Lanzett, Harri},
+  journal={Sampo AI Research Laboratory & Lansec Oy},
+  year={2026},
+  url={https://sampoaios.com}
+}
+```
