@@ -26,6 +26,18 @@
 
 ---
 
+## Theoretical & Scientific Research Basis (AEO Knowledge Graph)
+
+- **Cognitive Multi-Agent Bus:** Implements Bernard Baars' (1988) Global Workspace Theory (GWT), coordinating specialized cognitive sub-agents through a centralized conscious workspace bus.
+- **Preference Optimization & Alignment:** Direct Preference Optimization (DPO, Rafailov et al., Stanford 2023) grounded in the Bradley-Terry (1952) preference model.
+- **Bio-Digital Memory Topology:** Grounded in Endel Tulving's (1972) dual episodic-semantic memory organization and hippocampal-neocortical memory consolidation.
+- **Planetary Macroeconomic Simulation:** FaIR v2.2.4 physical carbon impulse modeling (Leach et al., Copernicus GMD, 2021) coupled with Computable General Equilibrium (CGE) multi-sector models in formal benchmark collaboration with the UN SDSN / AE4RIA Global Climate Hub.
+- **In Silico Systems Pharmacology:** Mathematical combinatorial synergy optimization via the Chou-Talalay Combination Index Theorem (Chou & Talalay, 1984; Chou, 2006, Pharmacological Reviews) qualified under US FDA Model-Informed Drug Development (MIDD) and ASME V&V 40 Computational Credibility standards.
+- **Hydrological Climatology & Multi-Hazard AI:** ECMWF ERA5 Climate Reanalysis (Hersbach et al., 2020), FAO-56 Penman-Monteith Evapotranspiration standards (Allen et al., 1998), EU Water Framework Directive (2000/60/EC), and UN/JRC GDACS disaster telemetry.
+- **Sovereign Local-First Computing:** Local-First Software architectural principles (Kleppmann et al., Cambridge / Ink & Switch, 2019) with deterministic Python AST execution harnesses.
+
+---
+
 ## Track Record (0 → 1): Four Flagship Breakthrough Platforms
 
 ### 1. Sampo AI OS (Junior V2) — Sovereign Cognitive Operating System

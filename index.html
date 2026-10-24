@@ -414,6 +414,37 @@
     .kpi-val { font-weight: 700; color: var(--text-main); }
     .kpi-lbl { color: var(--text-muted); font-size: 0.70rem; }
 
+    .research-basis-row {
+      margin-top: 14px;
+      padding-top: 11px;
+      border-top: 1px dashed var(--border-subtle);
+      font-size: 0.73rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      line-height: 1.45;
+    }
+    .research-basis-row .rb-lbl {
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.67rem;
+      letter-spacing: 0.05em;
+    }
+    .research-basis-row a {
+      color: var(--teal-accent);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s ease;
+    }
+    .research-basis-row a:hover {
+      color: var(--text-main);
+    }
+
     .card-actions-row {
       display: flex;
       gap: 10px;
@@ -868,11 +899,17 @@
           <span class="card-icon-pill pill-green">Cognitive Neuroscience</span>
           <h3 class="card-title">Global Workspace (GWT)</h3>
           <p class="card-text">
-            Based on Bernard Baars’ conscious spotlight theory. Rather than chaotic parallel chats, specialized sub-agents (<em>Planner → Analytical Thinker → Critic → Executor</em>) coordinate via a central AGI bus, ensuring single-focus execution and zero context decay.
+            Implements a computational interpretation of Bernard Baars’ Global Workspace Theory (GWT), coordinating specialized cognitive sub-agents (<em>Planner → Analytical Thinker → Adversarial Critic → Motor Executor</em>) through a centralized conscious workspace bus, ensuring single-focus execution and zero context decay.
           </p>
           <div class="kpi-row">
             <div><span class="kpi-val">Sequential</span><div class="kpi-lbl">Conscious Spotlight</div></div>
             <div><span class="kpi-val">Zero-Leakage</span><div class="kpi-lbl">AGI Message Bus</div></div>
+          </div>
+          <div class="research-basis-row">
+            <span class="rb-lbl">Theoretical Basis:</span>
+            <a href="https://en.wikipedia.org/wiki/Global_workspace_theory" target="_blank" rel="noopener">
+              Bernard Baars (1988) • Global Workspace Theory ↗
+            </a>
           </div>
         </div>
 
@@ -881,11 +918,17 @@
           <span class="card-icon-pill pill-gold">Continuous DPO Learning</span>
           <h3 class="card-title">Self-Evolving Metacognition</h3>
           <p class="card-text">
-            Junior logs every friction point into <code>error_diary.jsonl</code>. The automated <strong>DPO Harvester Daemon</strong> retroactively extracts Bradley-Terry preference pairs, training over 2,980 samples (loss 0.6397, reward margin 1.9071) to eliminate recurring mistakes.
+            Automated offline alignment based on the Bradley-Terry preference framework and Direct Preference Optimization (DPO). Junior logs execution friction to an immutable audit diary; the automated DPO Harvester Daemon dynamically constructs calibrated preference pairs to systematically eliminate recurring reasoning failures.
           </p>
           <div class="kpi-row">
             <div><span class="kpi-val">2,988 Pairs</span><div class="kpi-lbl">Calibrated Synapses</div></div>
             <div><span class="kpi-val">+1.907 Margin</span><div class="kpi-lbl">Bradley-Terry Delta</div></div>
+          </div>
+          <div class="research-basis-row">
+            <span class="rb-lbl">Mathematical Basis:</span>
+            <a href="https://arxiv.org/abs/2305.18290" target="_blank" rel="noopener">
+              Rafailov et al. (Stanford, 2023) • Direct Preference Optimization ↗
+            </a>
           </div>
         </div>
 
@@ -894,11 +937,17 @@
           <span class="card-icon-pill pill-teal">Hippocampal Model</span>
           <h3 class="card-title">Tri-Tier Associative Memory</h3>
           <p class="card-text">
-            Combines volatile Working Memory (STM with mathematical anti-contamination decay), chronological Episodic LTM, and a 10,480+ node Neocortical Semantic Knowledge Graph with automated orphan pruning during idle/sleep cycles.
+            Grounded in Endel Tulving’s cognitive memory taxonomy and hippocampal consolidation models. Unifies volatile Working Memory (STM with exponential half-life decay), chronological Episodic LTM, and an associative Neocortical Knowledge Graph (10,480+ nodes) with sleep-cycle synaptic pruning.
           </p>
           <div class="kpi-row">
             <div><span class="kpi-val">10,484 Nodes</span><div class="kpi-lbl">Neocortical Graph</div></div>
             <div><span class="kpi-val">Autonomous</span><div class="kpi-lbl">Sleep Pruning Pass</div></div>
+          </div>
+          <div class="research-basis-row">
+            <span class="rb-lbl">Cognitive Basis:</span>
+            <a href="https://en.wikipedia.org/wiki/Episodic_memory" target="_blank" rel="noopener">
+              Endel Tulving (1972) • Dual Episodic &amp; Semantic Memory ↗
+            </a>
           </div>
         </div>
       </div>
@@ -923,6 +972,14 @@
           <div class="kpi-row">
             <div><span class="kpi-val">4-Layer Fusion</span><div class="kpi-lbl">Flood • Drought • Quality • Security</div></div>
             <div><span class="kpi-val">Autonomous PPO</span><div class="kpi-lbl">5-D Sluice &amp; Pump Dispatch</div></div>
+          </div>
+          <div class="research-basis-row" style="margin-bottom: 12px; margin-top: 0; padding-top: 0; border-top: none;">
+            <span class="rb-lbl">Standards &amp; Baselines:</span>
+            <a href="https://doi.org/10.1002/qj.3803" target="_blank" rel="noopener" title="Hersbach et al., 2020 ERA5 Reanalysis">Hersbach et al. (ECMWF, 2020) ERA5</a>
+            <span>•</span>
+            <a href="https://www.fao.org/land-water/databases-and-software/cropwat/en/" target="_blank" rel="noopener">FAO-56 Penman–Monteith</a>
+            <span>•</span>
+            <a href="https://environment.ec.europa.eu/topics/water/water-framework-directive_en" target="_blank" rel="noopener">EU WFD (2000/60/EC) ↗</a>
           </div>
           <div class="card-actions-row">
             <button onclick="openSlideDeck('waterprism')" class="btn-action-sm btn-action-primary">
@@ -951,6 +1008,12 @@
             <div><span class="kpi-val">153 Nations</span><div class="kpi-lbl">Macroeconomic Stress-Testing</div></div>
             <div><span class="kpi-val">UN SDSN / AE4RIA</span><div class="kpi-lbl">Global Climate Hub Benchmark</div></div>
           </div>
+          <div class="research-basis-row" style="margin-bottom: 12px; margin-top: 0; padding-top: 0; border-top: none;">
+            <span class="rb-lbl">Scientific Framework:</span>
+            <a href="https://gmd.copernicus.org/articles/14/3007/2021/" target="_blank" rel="noopener" title="Leach et al., 2021 FaIR v2.0.0">FaIR v2.2.4 Impulse Model (GMD, 2021)</a>
+            <span>•</span>
+            <a href="https://unsdsn.globalclimatehub.org/" target="_blank" rel="noopener">UN SDSN Global Climate Hub ↗</a>
+          </div>
           <div class="card-actions-row">
             <button onclick="openSlideDeck('hefaistos')" class="btn-action-sm btn-action-primary">
               ▶ View 20-Slide Research Deck
@@ -978,6 +1041,14 @@
             <div><span class="kpi-val">12-State PBPK</span><div class="kpi-lbl">Free BBB &amp; QSP Solver</div></div>
             <div><span class="kpi-val">CI &lt; 0.70</span><div class="kpi-lbl">FDA MIDD &amp; ASME V&amp;V 40</div></div>
           </div>
+          <div class="research-basis-row" style="margin-bottom: 12px; margin-top: 0; padding-top: 0; border-top: none;">
+            <span class="rb-lbl">Clinical &amp; Regulatory Basis:</span>
+            <a href="https://pharmrev.aspetjournals.org/content/58/3/621" target="_blank" rel="noopener" title="Chou 2006 Pharmacological Reviews">Chou-Talalay CI &lt; 0.70 Synergy (Pharm Rev, 2006)</a>
+            <span>•</span>
+            <a href="https://www.asme.org/codes-standards/find-codes-standards/v-v-40-assessing-credibility-computational-models" target="_blank" rel="noopener">ASME V&amp;V 40</a>
+            <span>•</span>
+            <a href="https://www.fda.gov/drugs/development-resources/model-informed-drug-development-pilot-program" target="_blank" rel="noopener">US FDA MIDD ↗</a>
+          </div>
           <div class="card-actions-row">
             <button onclick="openSlideDeck('hygieia')" class="btn-action-sm btn-action-primary">
               ▶ View 13-Slide Botanical Deck
@@ -1001,6 +1072,12 @@
           <div class="kpi-row">
             <div><span class="kpi-val">100% Air-Gapped</span><div class="kpi-lbl">Zero Cloud Telemetry &amp; Leaks</div></div>
             <div><span class="kpi-val">0.00 € API Costs</span><div class="kpi-lbl">Local Inference &amp; AST Security</div></div>
+          </div>
+          <div class="research-basis-row" style="margin-bottom: 12px; margin-top: 0; padding-top: 0; border-top: none;">
+            <span class="rb-lbl">Architectural Foundation:</span>
+            <a href="https://www.inkandswitch.com/local-first/" target="_blank" rel="noopener" title="Kleppmann et al., 2019 Local-First Software">Kleppmann et al. (Cambridge, 2019) Local-First Software</a>
+            <span>•</span>
+            <a href="THE_COGNITIVE_HARNESS_CASE_STUDY.pdf" target="_blank">Deterministic AST Guardrails ↗</a>
           </div>
           <div class="card-actions-row">
             <button onclick="openSlideDeck('sampo_os')" class="btn-action-sm btn-action-primary">
