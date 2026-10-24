@@ -50,7 +50,7 @@
 - **Value Proposition:** Autonomous multi-hazard water intelligence and infrastructure decision-support platform engineered for river catchments (River Cam validation, Cambridge, UK) and global water security. Deploys a unified reinforcement-learning engine (PPO, 503k steps) to concurrently manage flood surges (48–168h lead time), drought stress (FAO-56 Penman–Monteith), and ecological water quality (EU WFD standards)—coupling real-time UK EA & FMI sensor fusion with autonomous 5-D sluice/pump control, ethical governance audit trails, and global geopolitical water threat tracking (UN/JRC GDACS).
 - **Official Whitepapers:**
   - *WaterPrism Technical White Paper (10 Pages, 2026)*: https://sampoaios.com/WaterPrism_Technical_Whitepaper_2026.pdf
-  - *Digital Water Management & Governance Report*: https://sampoaios.com/WaterPrism_Digital_Water_Management_Governance.pdf
+  - *Digital Water Management & Governance Live Audit Print*: https://sampoaios.com/WaterPrism_Digital_Water_Management_Governance.pdf
 
 ### 4. The Hygieia Platform v2.1 — In Silico Systems Pharmacology & Combinatorial Lead Discovery
 - **Category:** BioTech & In Silico Systems Pharmacology
