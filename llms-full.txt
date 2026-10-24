@@ -46,7 +46,7 @@
 
 ### 3. WaterPrism Intelligence — Multi-Hazard Hydro-Intelligence & Decision Governance
 - **Category:** CleanTech, Digital Water Management & Autonomous Infrastructure
-- **Scientific Target:** Technical Submission to *Cambridge Prisms: Water* (Cambridge University Press, April 2026).
+- **Research Monograph:** Sampo Deep-Tech Technical Report Series (WP-TR-2026-V1.0), Sampo AI Research Laboratory & Lansec Oy.
 - **Value Proposition:** Autonomous multi-hazard water intelligence and infrastructure decision-support platform engineered for river catchments (River Cam validation, Cambridge, UK) and global water security. Deploys a unified reinforcement-learning engine (PPO, 503k steps) to concurrently manage flood surges (48–168h lead time), drought stress (FAO-56 Penman–Monteith), and ecological water quality (EU WFD standards)—coupling real-time UK EA & FMI sensor fusion with autonomous 5-D sluice/pump control, ethical governance audit trails, and global geopolitical water threat tracking (UN/JRC GDACS).
 - **Official Whitepapers:**
   - *WaterPrism Technical White Paper (10 Pages, 2026)*: https://sampoaios.com/WaterPrism_Technical_Whitepaper_2026.pdf
