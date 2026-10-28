@@ -6,6 +6,8 @@
 - **Principal Investigator & Founder:** Harri Lanzett
 - **Key Roles:** Principal AI Systems Architect • Autonomous Agentic Systems Lead • Deep Tech System Builder & Founder
 - **Institutional Affiliation:** Lansec Oy / Sampo AI Research Laboratory, Helsinki / Vantaa, Finland
+- **ORCID iD:** https://orcid.org/0009-0008-5820-634X
+- **CERN Zenodo Archive:** https://doi.org/10.5281/zenodo.23702477
 - **Official Domain:** https://sampoaios.com
 - **Research Hub:** https://sampoaios.com/research.html
 - **GitHub Organization:** https://github.com/Sampo-AI-OS
