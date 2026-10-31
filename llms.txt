@@ -70,8 +70,12 @@
 - **Category:** BioTech & In Silico Systems Pharmacology
 - **Regulatory Framework:** US FDA Model-Informed Drug Development (MIDD) & ASME V&V 40 Computational Standard.
 - **Value Proposition:** Autonomous in silico systems pharmacology and combinatorial drug discovery engine that de-risks preclinical R&D by 80%. Replaces 10–15 year wet-lab trial-and-error by mathematically identifying patentable super-additive therapeutic synergies (Chou-Talalay CI < 0.70), predicting free blood-brain barrier (BBB) penetration via stiff 12-state PBPK ODE solvers, and optimizing targeted multi-carrier delivery vectors.
-- **Official Whitepapers:**
-  - *The Hygieia White Paper (12 Pages, 2026 PDF)*: https://sampoaios.com/The_Hygieia_White_Paper_2026.pdf
+- **Official Whitepapers & Peer-Reviewed Preprints (CERN Zenodo):**
+  - *The Hygieia Platform Core Architecture (HYG-TR-2026-V2.1)*: https://doi.org/10.5281/zenodo.23739602
+  - *GlyNAC Longevity Clinical Benchmark (HYG-20261031-GLYNAC-90D)*: https://doi.org/10.5281/zenodo.23839731
+  - *Sinclair Longevity Protocol Optimization (HYG-TR-2026-005)*: https://doi.org/10.5281/zenodo.23840026
+  - *Quadruple Multi-Carrier Longevity Grand Synthesis (HYG-APA-20261031-QUAD-LONGEVITY)*: https://doi.org/10.5281/zenodo.23840558
+  - *The Hygieia White Paper (PDF)*: https://sampoaios.com/The_Hygieia_White_Paper_2026.pdf
   - *Interactive HTML Edition*: https://sampoaios.com/The_Hygieia_White_Paper_2026.html
 
 ---

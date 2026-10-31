@@ -112,6 +112,42 @@
       },
       {
         "@type": "ScholarlyArticle",
+        "@id": "https://sampoaios.com/research.html#hygieia-glynac-benchmark",
+        "headline": "In Silico Verification and Systems Pharmacology Benchmark of the GlyNAC (Glycine + N-Acetylcysteine) Longevity Regimen",
+        "identifier": "HYG-20261031-GLYNAC-90D",
+        "sameAs": "https://doi.org/10.5281/zenodo.23839731",
+        "author": { "@id": "https://sampoaios.com/#architect" },
+        "datePublished": "2026-10-31",
+        "publisher": { "@id": "https://sampoaios.com/#organization" },
+        "description": "Deterministic in silico systems pharmacology benchmarking of the GlyNAC protocol against Baylor College of Medicine clinical trial evidence under ASME V&V 40 guidelines.",
+        "url": "https://sampoaios.com/Hygieia_APA_Report_HYG-20261031-GLYNAC-90D.pdf"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://sampoaios.com/research.html#sinclair-protocol-optimization",
+        "headline": "In Silico Deconstruction and Transdermal Carrier Optimization of the Sinclair Longevity Protocol: Resolving the Oral Resveratrol Bioavailability Paradox and NMN Stoichiometry",
+        "identifier": "HYG-TR-2026-005",
+        "sameAs": "https://doi.org/10.5281/zenodo.23840026",
+        "author": { "@id": "https://sampoaios.com/#architect" },
+        "datePublished": "2026-10-31",
+        "publisher": { "@id": "https://sampoaios.com/#organization" },
+        "description": "Computational systems pharmacology deconstruction of the Sinclair regimen (NMN + Resveratrol), resolving oral first-pass clearance and luminal NAM feedback via transdermal topical DMSO 0.05% excipient.",
+        "url": "https://sampoaios.com/HYG-TR-2026-005_Sinclair_Protocol_Optimization.pdf"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://sampoaios.com/research.html#quadruple-longevity-synthesis",
+        "headline": "Deterministic In Silico Systems Pharmacology and Pharmacokinetics of a Quadruple Multi-Carrier Longevity Formulation: Harmonizing Cellular Redox with Epigenetic Sirtuin Dynamics",
+        "identifier": "HYG-APA-20261031-QUAD-LONGEVITY",
+        "sameAs": "https://doi.org/10.5281/zenodo.23840558",
+        "author": { "@id": "https://sampoaios.com/#architect" },
+        "datePublished": "2026-10-31",
+        "publisher": { "@id": "https://sampoaios.com/#organization" },
+        "description": "Autonomous evaluation of a quadruple multi-carrier longevity formulation decoupling oral redox substrates (Glycine + NAC) from transdermal sirtuin activators (NMN + Resveratrol in DMSO), achieving strong cross-module synergy (CI = 0.312) and SIRT1 Cys371/374 protection.",
+        "url": "https://sampoaios.com/Hygieia_APA_Report_HYG-QUAD-LONGEVITY-60D.pdf"
+      },
+      {
+        "@type": "ScholarlyArticle",
         "@id": "https://sampoaios.com/research.html#the-hygieia",
         "headline": "The Hygieia: Autonomous In Silico Systems Pharmacology, Multi-Carrier Formulation Discovery & Deterministic Lead Optimization Platform",
         "identifier": "HYG-TR-2026-V2.1",
@@ -719,11 +755,11 @@
       </div>
 
       <div class="filter-bar">
-        <button class="filter-btn active" onclick="filterPapers('all')">All Publications (11)</button>
+        <button class="filter-btn active" onclick="filterPapers('all')">All Publications (14)</button>
         <button class="filter-btn" onclick="filterPapers('cognitive')">Cognitive AI &amp; Architecture (4)</button>
         <button class="filter-btn" onclick="filterPapers('climate')">Macroeconomics &amp; Climate (2)</button>
         <button class="filter-btn" onclick="filterPapers('water')">Water &amp; Resources (2)</button>
-        <button class="filter-btn" onclick="filterPapers('pharma')">In Silico Pharmacology (1)</button>
+        <button class="filter-btn" onclick="filterPapers('pharma')">In Silico Pharmacology (4)</button>
         <button class="filter-btn" onclick="filterPapers('security')">Security &amp; Geopolitics (2)</button>
       </div>
     </section>
@@ -1018,6 +1054,217 @@
 }</pre>
         </div>
       </article>
+
+      <!-- PAPER: GlyNAC Clinical Benchmark (OCTOBER 2026) -->
+      <article class="paper-card" data-cat="pharma" id="hygieia-glynac-benchmark">
+        <div class="paper-header-meta">
+          <span class="doc-id-pill">ID: HYG-20261031-GLYNAC-90D</span>
+          <a href="https://doi.org/10.5281/zenodo.23839731" target="_blank" class="doi-badge-link">
+            <span style="background: #10B981; color: white; padding: 1px 5px; border-radius: 3px; font-size: 0.68rem; font-weight: 700;">ZENODO DOI</span>
+            10.5281/zenodo.23839731
+          </a>
+          <span class="category-badge badge-teal">Clinical Benchmark &amp; Validation • October 2026</span>
+        </div>
+        <h2 class="paper-title">In Silico Verification and Systems Pharmacology Benchmark of the GlyNAC (Glycine + N-Acetylcysteine) Longevity Regimen: Validating The Hygieia Platform v2.1 Against Randomized Clinical Trial Evidence</h2>
+        <div class="paper-subtitle">ASME V&amp;V 40 Verification Against Baylor College of Medicine Randomized Clinical Trials (Kumar et al., 2021, 2023)</div>
+        <div class="paper-authorship">
+          <span>Project Leader &amp; PI: <strong>Harri Lanzett</strong></span>
+          <span>•</span>
+          <span>Affiliation: <strong>Sampo AI Research Laboratory &amp; Lansec Oy</strong></span>
+        </div>
+
+        <div class="abstract-box">
+          <div class="abstract-label">Executive Abstract</div>
+          Deterministic in silico systems pharmacology benchmarking of the GlyNAC (Glycine 100 mg/kg/day + N-Acetylcysteine 100 mg/kg/day) sub-chronic longevity protocol under ASME V&amp;V 40 guidelines. Utilizing a locked 6-compartment PBPK/QSP model with stiff Radau IIA integration, the engine simulates steady-state 90-day oral administration in a standardized adult human European male reference physiology. When challenged with identical clinical dosage inputs, the autonomous solver independently recapitulates empirical effect sizes observed in Baylor College of Medicine randomized clinical trials (Kumar et al., 2021, 2023)—demonstrating mechanistic convergence with -74.0% ROS scavenging, -56.1% NF-κB suppression, +162.0% glutathione restoration, and a Chou–Talalay combination index of CI = 0.720.
+        </div>
+
+        <div class="metrics-grid-mini">
+          <div class="m-item">
+            <div class="m-val">+162.0%</div>
+            <div class="m-lbl">Glutathione Restoration</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">-74.0%</div>
+            <div class="m-lbl">ROS Scavenging</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">CI = 0.720</div>
+            <div class="m-lbl">Chou-Talalay Synergism</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">Baylor RCT</div>
+            <div class="m-lbl">Clinical Convergence</div>
+          </div>
+        </div>
+
+        <div class="paper-actions">
+          <a href="Hygieia_APA_Report_HYG-20261031-GLYNAC-90D.pdf" target="_blank" class="btn-paper btn-paper-primary">
+            📄 Download Clinical Benchmark Report (PDF)
+          </a>
+          <a href="https://doi.org/10.5281/zenodo.23839731" target="_blank" class="btn-paper btn-paper-zenodo">
+            🌐 Open on Zenodo (CERN)
+          </a>
+          <button class="btn-paper btn-paper-cite" onclick="toggleCitation('cite-glynac')">
+            📋 Copy BibTeX Citation
+          </button>
+        </div>
+
+        <div id="cite-glynac" class="citation-drawer">
+          <span class="copy-confirm-badge" id="badge-glynac">Copied!</span>
+          <pre>@techreport{lanzett2026glynacbenchmark,
+  title={In Silico Verification and Systems Pharmacology Benchmark of the GlyNAC (Glycine + N-Acetylcysteine) Longevity Regimen: Validating The Hygieia Platform v2.1 Against Randomized Clinical Trial Evidence},
+  author={Lanzett, Harri},
+  institution={Sampo AI Research Laboratory and Lansec Oy},
+  year={2026},
+  month={October},
+  number={HYG-20261031-GLYNAC-90D},
+  doi={10.5281/zenodo.23839731},
+  url={https://doi.org/10.5281/zenodo.23839731}
+}</pre>
+        </div>
+      </article>
+
+      <!-- PAPER: Sinclair Protocol Optimization (OCTOBER 2026) -->
+      <article class="paper-card" data-cat="pharma" id="sinclair-protocol-optimization">
+        <div class="paper-header-meta">
+          <span class="doc-id-pill">ID: HYG-TR-2026-005</span>
+          <a href="https://doi.org/10.5281/zenodo.23840026" target="_blank" class="doi-badge-link">
+            <span style="background: #10B981; color: white; padding: 1px 5px; border-radius: 3px; font-size: 0.68rem; font-weight: 700;">ZENODO DOI</span>
+            10.5281/zenodo.23840026
+          </a>
+          <span class="category-badge badge-teal">Preprint &amp; Formulation Engineering • October 2026</span>
+        </div>
+        <h2 class="paper-title">In Silico Deconstruction and Transdermal Carrier Optimization of the Sinclair Longevity Protocol: Resolving the Oral Resveratrol Bioavailability Paradox and NMN Stoichiometry via The Hygieia Platform v2.1</h2>
+        <div class="paper-subtitle">Resolving Gut Phase II Splanchnic Glucuronidation and CD73-Mediated Luminal NAM Feedback via Topical DMSO Transdermal Carrier</div>
+        <div class="paper-authorship">
+          <span>Lead Author: <strong>Harri Lanzett</strong></span>
+          <span>•</span>
+          <span>Affiliation: <strong>Sampo AI Research Laboratory &amp; Lansec Oy</strong></span>
+        </div>
+
+        <div class="abstract-box">
+          <div class="abstract-label">Executive Abstract</div>
+          Computational systems pharmacology deconstruction and transdermal re-engineering of the standard oral longevity regimen (1,000 mg NMN + 1,000 mg trans-Resveratrol) popularized by David Sinclair. Utilizing The Hygieia Platform v2.1 locked 6-compartment PBPK differential solver under ASME V&amp;V 40 guidelines, we demonstrate that oral resveratrol undergoes &gt;98% splanchnic Phase II sulfation/glucuronidation clearance, while high-dose oral NMN triggers intestinal CD73 ecto-5'-nucleotidase degradation into sirtuin-inhibiting luminal nicotinamide (NAM). By transitioning to an engineered transdermal permeation matrix (Topical DMSO 0.05% excipient), the autonomous solver compresses optimal daily human dosages to 350 mg NMN (-65%) and 500 mg trans-Resveratrol (-50%). This multi-carrier optimization achieves a +92.8% increase in free target brain tissue resveratrol exposure (from 1.427 to 2.751 µg/mL), deepens Chou–Talalay cooperativity to CI = 0.341 (Strong Synergism), and demonstrates Dose-Reduction Indices of DRI = 2.86 (NMN) and 2.00 (Resveratrol) without metabolic bottleneck saturation.
+        </div>
+
+        <div class="metrics-grid-mini">
+          <div class="m-item">
+            <div class="m-val">+92.8%</div>
+            <div class="m-lbl">Target Brain Resveratrol</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">-65% / -50%</div>
+            <div class="m-lbl">Dose Load Compression</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">CI = 0.341</div>
+            <div class="m-lbl">Strong Synergism</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">DRI = 2.86 / 2.00</div>
+            <div class="m-lbl">Dose-Reduction Index</div>
+          </div>
+        </div>
+
+        <div class="paper-actions">
+          <a href="HYG-TR-2026-005_Sinclair_Protocol_Optimization.pdf" target="_blank" class="btn-paper btn-paper-primary">
+            📄 Download White Paper (PDF)
+          </a>
+          <a href="Hygieia_APA_Report_HYG-SWEETSPOT-NMN-RESV.pdf" target="_blank" class="btn-paper btn-paper-secondary">
+            📊 Download Full APA Simulation Dossier (PDF)
+          </a>
+          <a href="https://doi.org/10.5281/zenodo.23840026" target="_blank" class="btn-paper btn-paper-zenodo">
+            🌐 Open on Zenodo (CERN)
+          </a>
+          <button class="btn-paper btn-paper-cite" onclick="toggleCitation('cite-sinclair')">
+            📋 Copy BibTeX Citation
+          </button>
+        </div>
+
+        <div id="cite-sinclair" class="citation-drawer">
+          <span class="copy-confirm-badge" id="badge-sinclair">Copied!</span>
+          <pre>@techreport{lanzett2026sinclairoptimization,
+  title={In Silico Deconstruction and Transdermal Carrier Optimization of the Sinclair Longevity Protocol: Resolving the Oral Resveratrol Bioavailability Paradox and NMN Stoichiometry via The Hygieia Platform v2.1},
+  author={Lanzett, Harri},
+  institution={Sampo AI Research Laboratory and Lansec Oy},
+  year={2026},
+  month={October},
+  number={HYG-TR-2026-005},
+  doi={10.5281/zenodo.23840026},
+  url={https://doi.org/10.5281/zenodo.23840026}
+}</pre>
+        </div>
+      </article>
+
+      <!-- PAPER: Quadruple Longevity Grand Synthesis (OCTOBER 2026) -->
+      <article class="paper-card featured" data-cat="pharma" id="quadruple-longevity-synthesis">
+        <div class="paper-header-meta">
+          <span class="doc-id-pill">ID: HYG-APA-20261031-QUAD-LONGEVITY</span>
+          <a href="https://doi.org/10.5281/zenodo.23840558" target="_blank" class="doi-badge-link">
+            <span style="background: #10B981; color: white; padding: 1px 5px; border-radius: 3px; font-size: 0.68rem; font-weight: 700;">ZENODO DOI</span>
+            10.5281/zenodo.23840558
+          </a>
+          <span class="category-badge badge-teal">The Grand Synthesis • Translational Longevity • October 2026</span>
+        </div>
+        <h2 class="paper-title">Deterministic In Silico Systems Pharmacology and Pharmacokinetics of a Quadruple Multi-Carrier Longevity Formulation: Harmonizing Cellular Redox with Epigenetic Sirtuin Dynamics Across a 60-Day Chronic Intervention</h2>
+        <div class="paper-subtitle">Dual-Vector Decoupling of Oral Redox Substrates (Glycine + NAC) from Transdermal Epigenetic Activators (NMN + Resveratrol in DMSO) with SIRT1 Cys371/374 Catalytic Shielding</div>
+        <div class="paper-authorship">
+          <span>Lead Author: <strong>Harri Lanzett</strong></span>
+          <span>•</span>
+          <span>Affiliation: <strong>Sampo AI Research Laboratory &amp; Lansec Oy</strong></span>
+        </div>
+
+        <div class="abstract-box">
+          <div class="abstract-label">Executive Abstract</div>
+          Autonomous, deterministic systems pharmacology evaluation of a quadruple multi-carrier longevity formulation decoupling oral hydrophilic redox substrates (Glycine 2,400 mg maintenance / 7,300 mg clinical induction + N-Acetylcysteine 2,400 mg maintenance / 7,300 mg clinical induction) from transdermal lipophilic epigenetic activators (Nicotinamide Mononucleotide 350 mg + trans-Resveratrol 500 mg delivered via Topical DMSO 0.05% excipient). Utilizing The Hygieia Platform v2.1 locked 6-compartment PBPK differential solver with stiff Radau IIA integration under ASME V&amp;V 40 guidelines, this dual-vector architecture resolves the 16.6-gram oral megadose burden and splanchnic Phase II clearance barriers. Crucially, the model demonstrates profound cross-module cooperativity: GlyNAC-mediated glutathione elevation (+164.5%) prevents oxidative disulfide inactivation of critical SIRT1 catalytic cysteines (Cys371/Cys374), boosting effective SIRT1 deacetylase turnover by +248%. Across a 60-day chronic steady-state intervention, target brain steady-state peak exposures reach 10.13 µg/mL (Glycine), 6.86 µg/mL (NAC), 2.08 µg/mL (NMN), and 2.75 µg/mL (free Resveratrol). Synergism quantification via the Median-Effect Principle of Chou–Talalay reveals modular cooperativity (CI_GlyNAC = 0.720, CI_NMN-Resv = 0.341) and a cross-module coupling index of CI_coupled = 0.312 (Strong Synergism), driving Composite Biological Fitness to J = 512.40 with 67.2% NF-κB suppression, +564.8% Nrf2/ARE induction, and ceiling autophagy/mitophagy scores (3.00 / 3.00).
+        </div>
+
+        <div class="metrics-grid-mini">
+          <div class="m-item">
+            <div class="m-val">+248%</div>
+            <div class="m-lbl">SIRT1 Catalytic Turnover</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">CI = 0.312</div>
+            <div class="m-lbl">Cross-Module Synergism</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">J = 512.40</div>
+            <div class="m-lbl">Composite Biological Fitness</div>
+          </div>
+          <div class="m-item">
+            <div class="m-val">Dual-Carrier</div>
+            <div class="m-lbl">Oral Aqueous + Topical DMSO</div>
+          </div>
+        </div>
+
+        <div class="paper-actions">
+          <a href="Hygieia_APA_Report_HYG-QUAD-LONGEVITY-60D.pdf" target="_blank" class="btn-paper btn-paper-primary">
+            📄 Download 4-Carrier Synthesis Report (PDF)
+          </a>
+          <a href="https://doi.org/10.5281/zenodo.23840558" target="_blank" class="btn-paper btn-paper-zenodo">
+            🌐 Open on Zenodo (CERN)
+          </a>
+          <button class="btn-paper btn-paper-cite" onclick="toggleCitation('cite-quad')">
+            📋 Copy BibTeX Citation
+          </button>
+        </div>
+
+        <div id="cite-quad" class="citation-drawer">
+          <span class="copy-confirm-badge" id="badge-quad">Copied!</span>
+          <pre>@techreport{lanzett2026quadlongevity,
+  title={Deterministic In Silico Systems Pharmacology and Pharmacokinetics of a Quadruple Multi-Carrier Longevity Formulation Comprising Glycine, N-Acetylcysteine, Nicotinamide Mononucleotide, and Resveratrol: Harmonizing Cellular Redox with Epigenetic Sirtuin Dynamics Across a 60-Day Chronic Intervention},
+  author={Lanzett, Harri},
+  institution={Sampo AI Research Laboratory and Lansec Oy},
+  year={2026},
+  month={October},
+  number={HYG-APA-20261031-QUAD-LONGEVITY},
+  doi={10.5281/zenodo.23840558},
+  url={https://doi.org/10.5281/zenodo.23840558}
+}</pre>
+        </div>
+      </article>
+
 
       <!-- PAPER 5: The Hefaistos Platform (SEPTEMBER 2026) -->
       <article class="paper-card" data-cat="climate" id="the-hefaistos">
