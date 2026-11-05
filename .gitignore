@@ -1,0 +1,76 @@
+# ==========================================
+# Sampo AI OS Web (sampoaios-web) - .gitignore
+# ==========================================
+
+# 1. Salaisuudet, avaimet ja ympäristömuuttujat (KRIITTINEN)
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+id_rsa*
+*credential*
+*secret*
+*token*
+
+# 2. Käyttöjärjestelmän ja kansioiden roskat
+Thumbs.db
+Thumbs.db:*
+ehthumbs.db
+[Dd]esktop.ini
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# 3. Editorit ja IDE-asetukset
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# 4. Python ja kehitysskriptit (staattiselle web-repolle ei kuulu Python-koodi)
+__pycache__/
+*.py[cod]
+*$py.class
+*.py
+.venv/
+venv/
+env/
+
+# 5. Tietokannat ja välimuistit
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# 6. Väliaikaistiedostot ja varmuuskopiot
+*.tmp
+*.bak
+*.swp
+*~
+New Text Document*.txt
+scratch/
+debug_*
+test_*
+
+# 7. Sisäiset suunnitelmat, to-do-listat ja strategiat
+*todo*.md
+*TODO*.md
+*strategia*.md
+*strategy*.md
+*checklist*.md
+_internal*
+Zenodo311026.md
+zenodo_*.md
+
+# 8. Node / Build (jos käytössä)
+node_modules/
+.npm
+npm-debug.log*
