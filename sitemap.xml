@@ -72,4 +72,34 @@
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://sampoaios.com/HYG-TR-2026-005_Sinclair_Protocol_Optimization.pdf</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sampoaios.com/HYG-TR-2026-006_Curcumin_Piperine_Optimization.pdf</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sampoaios.com/HYG-TR-2026-007_Caffeine_Theanine_Optimization.pdf</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sampoaios.com/HYG-TR-2026-008_Berberine_Silymarin_Optimization.pdf</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sampoaios.com/HYG-TR-2026-010_Platform_Master_Monograph.pdf</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
 </urlset>

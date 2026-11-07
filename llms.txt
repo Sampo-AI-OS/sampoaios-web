@@ -73,7 +73,11 @@
 - **Official Whitepapers & Peer-Reviewed Preprints (CERN Zenodo):**
   - *The Hygieia Platform Core Architecture (HYG-TR-2026-V2.1)*: https://doi.org/10.5281/zenodo.23739602
   - *GlyNAC Longevity Clinical Benchmark (HYG-20261031-GLYNAC-90D)*: https://doi.org/10.5281/zenodo.23839731
-  - *Sinclair Longevity Protocol Optimization (HYG-TR-2026-005)*: https://doi.org/10.5281/zenodo.23840026
+  - *Sinclair Longevity Protocol Optimization (HYG-TR-2026-005)*: https://doi.org/10.5281/zenodo.24040390
+  - *Curcumin-Piperine Optimization (HYG-TR-2026-006)*: https://doi.org/10.5281/zenodo.24040914
+  - *Caffeine-Theanine Nootropic Synergy (HYG-TR-2026-007)*: https://doi.org/10.5281/zenodo.24041178
+  - *Berberine-Silymarin Cardiometabolic Synergy (HYG-TR-2026-008)*: https://doi.org/10.5281/zenodo.24041301
+  - *The Hygieia Platform Master Monograph (HYG-TR-2026-010)*: https://doi.org/10.5281/zenodo.24041481
   - *Quadruple Multi-Carrier Longevity Grand Synthesis (HYG-APA-20261031-QUAD-LONGEVITY)*: https://doi.org/10.5281/zenodo.23840558
   - *The Hygieia White Paper (PDF)*: https://sampoaios.com/The_Hygieia_White_Paper_2026.pdf
   - *Interactive HTML Edition*: https://sampoaios.com/The_Hygieia_White_Paper_2026.html
