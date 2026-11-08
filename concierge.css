@@ -1,0 +1,464 @@
+/* ==========================================================================
+   SAMPO CONCIERGE — Digital Individuation & Cognitive Architect
+   Executive Academic Terminal & Intellectual Curator
+   Design Language: Obsidian Glass, Restrained Emerald & Heritage Gold
+   ========================================================================== */
+
+:root {
+  --c-bg: rgba(6, 13, 9, 0.95);
+  --c-surface: rgba(12, 23, 17, 0.90);
+  --c-surface-hover: rgba(18, 33, 24, 0.95);
+  --c-border: rgba(16, 185, 129, 0.22);
+  --c-border-subtle: rgba(255, 255, 255, 0.07);
+  --c-emerald: #10B981;
+  --c-emerald-dim: rgba(16, 185, 129, 0.12);
+  --c-teal: #0E7490;
+  --c-gold: #D97706;
+  --c-gold-dim: rgba(217, 119, 6, 0.12);
+  --c-text-main: #F1F5F3;
+  --c-text-muted: #8E9F96;
+  --c-text-subtle: #5B6C64;
+}
+
+/* Floating Launcher Button */
+#concierge-launcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(145deg, #0A1611 0%, #050B08 100%);
+  border: 1px solid var(--c-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(16, 185, 129, 0.25);
+  padding: 10px 18px 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+#concierge-launcher:hover {
+  transform: translateY(-2px);
+  border-color: var(--c-emerald);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 20px rgba(16, 185, 129, 0.35);
+}
+
+.concierge-avatar-orb {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0B1E15;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-emerald);
+}
+
+.concierge-pulse-ring {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--c-emerald);
+  opacity: 0.6;
+  animation: conciergePulse 3.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes conciergePulse {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.22); opacity: 0; }
+  100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+.concierge-launcher-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.concierge-launcher-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--c-text-main);
+  letter-spacing: 0.01em;
+}
+
+.concierge-launcher-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.64rem;
+  color: var(--c-emerald);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Chat Modal Window */
+#concierge-window {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 99999;
+  width: 450px;
+  max-width: calc(100vw - 32px);
+  height: 640px;
+  max-height: calc(100vh - 105px);
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(16, 185, 129, 0.2);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.97);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#concierge-window.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Header */
+.concierge-header {
+  padding: 16px 20px;
+  background: rgba(10, 20, 15, 0.85);
+  border-bottom: 1px solid var(--c-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.concierge-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.concierge-header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #0B1C14;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-emerald);
+}
+
+.concierge-header-info h4 {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.concierge-badge-oracle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.60rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: var(--c-gold-dim);
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  color: #FBBF24;
+  letter-spacing: 0.06em;
+}
+
+.concierge-header-info p {
+  margin: 2px 0 0 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--c-text-muted);
+}
+
+.concierge-close-btn {
+  background: none;
+  border: none;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+
+.concierge-close-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+/* Messages Body */
+.concierge-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 185, 129, 0.25) transparent;
+}
+
+.concierge-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.concierge-body::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.25);
+  border-radius: 2px;
+}
+
+/* Message Styles */
+.concierge-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 94%;
+  animation: conciergeFadeIn 0.25s ease-out;
+}
+
+@keyframes conciergeFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.concierge-msg.bot {
+  align-self: flex-start;
+}
+
+.concierge-msg.user {
+  align-self: flex-end;
+}
+
+.concierge-bubble {
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  line-height: 1.62;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--c-text-main);
+}
+
+.concierge-msg.bot .concierge-bubble {
+  background: var(--c-surface);
+  border-left: 2px solid var(--c-emerald);
+  border-top: 1px solid var(--c-border-subtle);
+  border-right: 1px solid var(--c-border-subtle);
+  border-bottom: 1px solid var(--c-border-subtle);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.concierge-msg.bot .concierge-bubble strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.concierge-msg.bot .concierge-bubble em {
+  color: #A7F3D0;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.concierge-msg.bot .concierge-bubble blockquote {
+  margin: 10px 0;
+  padding: 8px 14px;
+  background: rgba(16, 185, 129, 0.05);
+  border-left: 2px solid var(--c-emerald);
+  color: #D1FAE5;
+  font-size: 0.84rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.concierge-msg.user .concierge-bubble {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.35) 0%, rgba(16, 185, 129, 0.25) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #FFFFFF;
+}
+
+.concierge-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--c-text-subtle);
+  margin-top: 5px;
+  padding: 0 2px;
+}
+
+/* Quick Prompt Suggestions */
+.concierge-prompts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.concierge-prompts-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #FBBF24;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.concierge-chip {
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #D1FAE5;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.81rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.concierge-chip:hover {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: var(--c-emerald);
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+.concierge-chip-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.70rem;
+  font-weight: 700;
+  color: var(--c-emerald);
+}
+
+/* Typing Indicator */
+.concierge-typing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 14px;
+  background: var(--c-surface);
+  border-radius: 8px;
+  width: fit-content;
+  border-left: 2px solid var(--c-emerald);
+}
+
+.concierge-dot {
+  width: 5px;
+  height: 5px;
+  background: var(--c-emerald);
+  border-radius: 50%;
+  animation: conciergeBounce 1.4s infinite ease-in-out;
+}
+
+.concierge-dot:nth-child(1) { animation-delay: -0.32s; }
+.concierge-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes conciergeBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Footer & Input Bar */
+.concierge-footer {
+  padding: 14px 18px;
+  background: rgba(8, 16, 12, 0.95);
+  border-top: 1px solid var(--c-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.concierge-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.concierge-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.86rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.concierge-input:focus {
+  border-color: var(--c-emerald);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.15);
+}
+
+.concierge-input::placeholder {
+  color: var(--c-text-subtle);
+}
+
+.concierge-send-btn {
+  background: #0E291E;
+  border: 1px solid var(--c-border);
+  color: var(--c-emerald);
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.concierge-send-btn:hover {
+  background: var(--c-emerald);
+  color: #050B08;
+  border-color: var(--c-emerald);
+}
+
+.concierge-disclaimer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.60rem;
+  color: var(--c-text-subtle);
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  #concierge-window {
+    right: 12px;
+    bottom: 80px;
+    width: calc(100vw - 24px);
+    height: calc(100vh - 96px);
+  }
+  #concierge-launcher {
+    right: 16px;
+    bottom: 16px;
+    padding: 8px 14px 8px 10px;
+  }
+}
