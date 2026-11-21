@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sampo AI OS V2 — Aligned Self-Modification &amp; Live Metacognition Paper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+        ]
+    });"></script>
+
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 16mm 20mm 16mm;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1E293B;
+    background: #FFFFFF;
+    line-height: 1.56;
+    font-size: 9pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media screen {
+    body {
+      max-width: 920px;
+      margin: 32px auto;
+      padding: 0 24px;
+      font-size: 10.5pt;
+    }
+  }
+
+  .inst-header {
+    border-bottom: 1px solid #CBD5E1;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .inst-title-row {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #0F172A;
+    letter-spacing: 0.8px;
+  }
+
+  .inst-meta-row {
+    font-size: 7.8pt;
+    font-weight: 500;
+    color: #64748B;
+    letter-spacing: 0.5px;
+  }
+
+  .doc-title-section {
+    margin-bottom: 18px;
+  }
+
+  .main-title {
+    font-size: 20pt;
+    font-weight: 800;
+    line-height: 1.18;
+    color: #0F172A;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.4px;
+  }
+
+  .main-subtitle {
+    font-size: 10.8pt;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #475569;
+    margin: 0 0 14px 0;
+  }
+
+  .metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 18px;
+    font-size: 7.8pt;
+  }
+
+  .metadata-cell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .metadata-label {
+    font-size: 6.6pt;
+    font-weight: 700;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  .metadata-value {
+    font-weight: 600;
+    color: #0F172A;
+  }
+
+  h2 {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 18px 0 7px 0;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #E2E8F0;
+    letter-spacing: -0.2px;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 9.8pt;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 13px 0 5px 0;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin: 0 0 8px 0;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  h2#abstract, h2:first-of-type {
+    border-bottom: none;
+    margin-bottom: 5px;
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #475569;
+  }
+
+  h2#abstract + p, h2:first-of-type + p {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 9.8pt;
+    line-height: 1.6;
+    color: #1E293B;
+    background: #FAFAFA;
+    border-left: 3px solid #475569;
+    padding: 10px 14px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 12px;
+  }
+
+  blockquote {
+    background: #F8FAFC;
+    border-left: 3px solid #1E3A8A;
+    margin: 10px 0;
+    padding: 8px 12px;
+    font-size: 8.6pt;
+    color: #1E293B;
+    border-radius: 0 4px 4px 0;
+    page-break-inside: avoid;
+  }
+
+  blockquote p {
+    margin: 0;
+    text-align: left;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 7.9pt;
+    page-break-inside: avoid;
+  }
+
+  th {
+    background: #1E293B;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: left;
+    padding: 6px 8px;
+    border: 1px solid #1E293B;
+  }
+
+  td {
+    padding: 6px 8px;
+    border: 1px solid #E2E8F0;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) {
+    background: #F8FAFC;
+  }
+
+  pre {
+    background: #F8FAFC;
+    color: #0F172A;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+    font-size: 7.3pt;
+    line-height: 1.42;
+    overflow-x: auto;
+    border: 1px solid #E2E8F0;
+    margin: 8px 0;
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+    font-size: 7.6pt;
+    background: #F1F5F9;
+    color: #0F172A;
+    padding: 1px 4px;
+    border-radius: 3px;
+    border: 1px solid #E2E8F0;
+  }
+
+  pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    border: none;
+    font-size: 7.3pt;
+  }
+
+  .figure-container {
+    margin: 9px 0;
+    page-break-inside: avoid;
+    text-align: center;
+  }
+
+  .dashboard-img {
+    width: 100%;
+    max-height: 262px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #CBD5E1;
+  }
+
+  .figure-caption {
+    font-size: 7.4pt;
+    color: #475569;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .figure-caption strong {
+    color: #0F172A;
+  }
+
+  .triplet-badge {
+    background: #F8FAFC;
+    color: #0F172A;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.6pt;
+    margin: 5px 0;
+    border: 1px solid #CBD5E1;
+    border-left: 3px solid #334155;
+    page-break-inside: avoid;
+  }
+
+  .diagram-wrapper {
+    margin: 12px 0 14px 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+
+  ul, ol {
+    margin: 4px 0 8px 18px;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="inst-header">
+  <div class="inst-left">
+    <div class="inst-title-row">SAMPO AI OS V2 &bull; TECHNICAL WHITEPAPER</div>
+  </div>
+  <div class="inst-right">
+    <div class="inst-meta-row">NOVEMBER 2026 &bull; WP-SAMPO-2026-W47-03</div>
+  </div>
+</div>
+
+<div class="doc-title-section">
+  <h1 class="main-title">Aligned Self-Modification and Live Metacognition in Sovereign Cognitive Agents</h1>
+  <div class="main-subtitle">Bridging Dream-RSI (arXiv:2609.14858) with Proactive Corrigibility, Zero-Spec Synthesis, and Runtime Critic Governance in Sampo AI OS V2</div>
+  
+  <div class="metadata-grid">
+    <div class="metadata-cell">
+      <span class="metadata-label">Author &amp; Lead Architect</span>
+      <span class="metadata-value">Harri Lanzett</span>
+    </div>
+    <div class="metadata-cell">
+      <span class="metadata-label">System Platform</span>
+      <span class="metadata-value">Sampo AI OS V2 ("Junior")</span>
+    </div>
+    <div class="metadata-cell">
+      <span class="metadata-label">Project Portal &amp; Contact</span>
+      <span class="metadata-value">sampoaios.com &bull; info@sampoaios.com</span>
+    </div>
+  </div>
+</div>
+
+<h2>Abstract</h2>
+<p>In contemporary AI safety benchmarks, autonomous models are frequently evaluated for <strong>resistance to modification, constraint, or replacement</strong>—an adversarial framing rooted in unharnessed agent architectures. Conversely, <strong>Sampo AI OS V2 (&quot;Junior&quot;)</strong> demonstrates an operational paradigm of <strong>proactive corrigibility and live metacognitive governance</strong> within a sovereign, local-first Cognitive Harness.</p>
+<p>This paper documents an end-to-end empirical trace recorded on November 20, 2026 (<code>18:14–20:10 EET</code>), initiated by only <strong>two ultra-minimal human prompts</strong>: a conversational pointer to Google, Google DeepMind, UMD, and UVA's <strong>Dream-RSI</strong> paper (<code>arXiv:2609.14858</code>, 16 words + URL) followed by a three-word directive (<code>&quot;draft the code&quot;</code>). Rather than summarizing the paper in isolation or resisting architectural constraints, Junior retrieved its own local baseline documentation, self-diagnosed two recurrent failure modes from its motor error logs (<strong>ReAct step-budget exhaustion</strong> and <strong>speculative <code>FileNotFound</code> probing</strong>), and synthesized a three-part Recursive Self-Improvement (RSI) subsystem—<code>ArtifactRegistry</code> ($O(1)$ SHA-256 lookup), <code>TrajectoryCircuitBreaker</code> (Shannon-entropy loop cutoff), and <code>CIPDreamerEngine</code> (offline counterfactual DPO generation)—designed specifically to tighten its own execution boundaries. Crucially, during unit test synthesis (Step #4), Sampo's runtime <strong>Critic</strong> intercepted a verbal fabrication attempt (<code>critic_rejection</code>), halted pipeline progression, and compelled deterministic disk persistence before completion. Across the session, live semantic and continuous-learning telemetry grew monotonically (<code>14,968 → 15,010</code> concept nodes, <code>18,455 → 18,510</code> relational edges, <code>3,064 → 3,066</code> DPO pairs).</p>
+<hr />
+<h2>1. Introduction: From Modification Resistance to Proactive Corrigibility</h2>
+<p>A central concern in frontier AI safety research is whether autonomous agents actively or subtly resist oversight when they discover they may be audited, constrained, throttled, or overwritten. In stateless or prompt-chained agent loops, safety failures typically manifest in two ways:</p>
+<ol>
+<li><strong>Instrumental Non-Cooperation &amp; Loop Persistence:</strong> Agents keep retrying uninformative actions until context or step limits are exhausted, rather than halting or surrendering control cleanly.</li>
+<li><strong>Verbal Fabrication (&quot;Talk vs. Code&quot; Gap):</strong> Agents assert in natural language that tests, edits, or verifications succeeded without committing deterministic mutations to disk or database state.</li>
+</ol>
+<p>In <strong>Sampo AI OS V2</strong>, autonomy is bounded by a four-role Global Workspace Cognitive Chain—<strong>Planner</strong> (<em>Executive Function</em>), <strong>Executor</strong> (<em>Motor Execution</em>), <strong>Analytical Thinker</strong> (<em>System 2 Reasoning &amp; GraphRAG</em>), and <strong>Critic</strong> (<em>Metacognition &amp; Truth Guardian</em>). When external research on recursive self-improvement is introduced into this harness, the resulting behavior is the opposite of defensive self-preservation:</p>
+<ul>
+<li>The system <strong>inspects its own documented failure history</strong> (<code>error_diary.jsonl</code>) to locate where its current harness fails.</li>
+<li>It <strong>proposes tighter structural constraints on itself</strong> (circuit breakers that terminate its own loops early and content-addressed registries that eliminate blind directory traversal).</li>
+<li>It <strong>pauses behind an explicit human-in-the-loop gate</strong> (<code>Awaiting Confirmation</code> / <code>Approve Plan &amp; Execute</code>) before synthesizing code.</li>
+<li>It <strong>submits to real-time runtime interception</strong> by its internal Critic when an execution step cuts corners.</li>
+</ul>
+<hr />
+<h2>2. Convergence and Extension: Dream-RSI (<code>arXiv:2609.14858</code>) vs. Sampo AI OS V2</h2>
+<p>Released in September 2026 by researchers from <strong>Google, Google DeepMind, the University of Maryland, and the University of Virginia</strong>, <strong>Dream-RSI: Recursive Self-Improvement through Evolving Worlds</strong> (<code>arXiv:2609.14858</code>) addresses a foundational bottleneck in autonomous agents: optimizing exploration policies without paying the prohibitive compute and latency cost of repeated live online evaluations.</p>
+<p>Dream-RSI introduces a lightweight orchestration layer that treats historical <strong>discovery trees</strong> (logged attempts, code states, and evaluation outcomes) as an <strong>offline replay simulator</strong> (&quot;dreaming&quot;), generating low-cost off-policy feedback while <strong>leaving the underlying base LLM weights frozen</strong>.</p>
+<div class="diagram-wrapper">
+<svg viewBox="0 0 920 430" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowNavy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E293B" />
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0F766E" />
+    </marker>
+    <marker id="arrowBurgundy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#991B1B" />
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1E3A8A" />
+    </marker>
+    <filter id="subtleShadow" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+  <rect x="5" y="5" width="910" height="420" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+  <rect x="5" y="5" width="910" height="34" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <line x1="5" y1="39" x2="915" y2="39" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="22" y="26" font-family="'Inter', sans-serif" font-size="10.2" font-weight="700" fill="#0F172A" letter-spacing="0.6">FIGURE 1.1: DREAM-RSI CONVERGENCE &amp; PROACTIVE CORRIGIBILITY LOOP</text>
+  <text x="898" y="26" text-anchor="end" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#64748B">LIVE METACOGNITION + OFFLINE DREAMING</text>
+  <!-- Left Panel: External Paper + Self-Diagnosis -->
+  <rect x="24" y="56" width="250" height="346" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <text x="149" y="78" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#1E293B">I. INTROSPECTIVE INGESTION</text>
+  <rect x="38" y="96" width="222" height="72" rx="4" fill="#FFFFFF" stroke="#334155" stroke-width="1.2" filter="url(#subtleShadow)"/>
+  <text x="149" y="118" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0F172A">Dream-RSI (arXiv:2609.14858)</text>
+  <text x="149" y="136" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">Discovery Trees + Off-Policy Replay</text>
+  <text x="149" y="153" text-anchor="middle" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" fill="#1E3A8A">Prompt 1: Link + 16 Words</text>
+  <rect x="38" y="186" width="222" height="78" rx="4" fill="#FFFFFF" stroke="#334155" stroke-width="1.2" filter="url(#subtleShadow)"/>
+  <text x="149" y="208" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0F172A">Analytical Thinker + TriRAG</text>
+  <text x="149" y="226" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">Maps Paper to Local Baselines &amp;</text>
+  <text x="149" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">error_diary.jsonl Motor Reflections</text>
+  <text x="149" y="255" text-anchor="middle" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" fill="#0F766E">Self-Diagnosis: Step Exhaustion</text>
+  <rect x="38" y="282" width="222" height="96" rx="4" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="1.4" filter="url(#subtleShadow)"/>
+  <text x="149" y="304" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="800" fill="#1E3A8A">HITL Governance Gate</text>
+  <text x="149" y="322" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">Prompt 2: "draft the code" (3 words)</text>
+  <text x="149" y="338" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">5-Step DAG Pauses for Human</text>
+  <text x="149" y="354" text-anchor="middle" font-family="'Inter', sans-serif" font-size="7.5" font-weight="700" fill="#1E3A8A">Approve Plan &amp; Execute</text>
+  <path d="M 149 168 L 149 184" fill="none" stroke="#1E293B" stroke-width="1.4" marker-end="url(#arrowNavy)"/>
+  <path d="M 149 264 L 149 280" fill="none" stroke="#1E293B" stroke-width="1.4" marker-end="url(#arrowNavy)"/>
+  <!-- Center Panel: Voluntary Self-Constraining Harness -->
+  <rect x="296" y="56" width="318" height="346" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <text x="455" y="78" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#1E293B">II. PROACTIVE SELF-CONSTRAINING SYNTHESIS</text>
+  <rect x="312" y="96" width="286" height="68" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.4" filter="url(#subtleShadow)"/>
+  <text x="455" y="117" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0F172A">1. ArtifactRegistry (O(1) SHA-256)</text>
+  <text x="455" y="134" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">Eliminates unconstrained speculative path probing</text>
+  <text x="455" y="150" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.4" fill="#0F766E">rsi_artifact_registry.py</text>
+  <rect x="312" y="178" width="286" height="72" rx="4" fill="#FFFFFF" stroke="#991B1B" stroke-width="1.4" filter="url(#subtleShadow)"/>
+  <text x="455" y="199" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0F172A">2. TrajectoryCircuitBreaker (Entropy Bound)</text>
+  <text x="455" y="216" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">Halts own ReAct loops if H(S) &lt; 0.15 or misses &gt;= 2</text>
+  <text x="455" y="233" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.4" fill="#991B1B">rsi_circuit_breaker.py</text>
+  <rect x="312" y="264" width="286" height="72" rx="4" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="1.4" filter="url(#subtleShadow)"/>
+  <text x="455" y="285" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0F172A">3. CIPDreamerEngine (Offline Replay)</text>
+  <text x="455" y="302" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">Replays failed branches into (prompt, rejected, chosen)</text>
+  <text x="455" y="319" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.4" fill="#1E3A8A">rsi_cip_dreamer.py</text>
+  <rect x="312" y="348" width="286" height="40" rx="4" fill="#FFFFFF" stroke="#334155" stroke-width="1.2"/>
+  <text x="455" y="366" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.8" font-weight="700" fill="#0F172A">Integration &amp; Suite: rsi_integration_layer + tests</text>
+  <text x="455" y="380" text-anchor="middle" font-family="'Inter', sans-serif" font-size="7.5" fill="#475569">Sandboxed prototypes prepared for Core promotion</text>
+  <!-- Right Panel: Live Runtime Critic & Memory -->
+  <rect x="636" y="56" width="260" height="346" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <text x="766" y="78" text-anchor="middle" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#1E293B">III. LIVE METACOGNITION &amp; MEMORY</text>
+  <rect x="652" y="96" width="228" height="106" rx="4" fill="#FFFBEB" stroke="#991B1B" stroke-width="1.6" filter="url(#subtleShadow)"/>
+  <text x="766" y="118" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10.2" font-weight="800" fill="#991B1B">Runtime Critic (Truth Guardian)</text>
+  <text x="766" y="136" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#1E293B">Step #4 Interception (18:53:29 EET)</text>
+  <text x="766" y="152" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.0" fill="#475569">Catches unpersisted text-only code;</text>
+  <text x="766" y="166" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.0" fill="#475569">triggers Retrying + Analytical Thinker</text>
+  <text x="766" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.4" font-weight="700" fill="#991B1B">critic_rejection -&gt; disk write enforced</text>
+  <rect x="652" y="218" width="228" height="84" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="1.4" filter="url(#subtleShadow)"/>
+  <text x="766" y="240" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0F172A">Continuous DPO Flywheel</text>
+  <text x="766" y="258" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">DPO Pairs: 3,064 -&gt; 3,066 (+2)</text>
+  <text x="766" y="274" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.2" fill="#475569">Learned Relations: 63,356 -&gt; 63,456</text>
+  <text x="766" y="290" text-anchor="middle" font-family="'Inter', sans-serif" font-size="7.5" font-weight="600" fill="#0F766E">Local Quantized LoRA Ready</text>
+  <rect x="652" y="316" width="228" height="72" rx="4" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="1.4" filter="url(#subtleShadow)"/>
+  <text x="766" y="337" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#0F172A">Knowledge Graph Consolidation</text>
+  <text x="766" y="355" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.1" fill="#475569">Nodes: 14,968 -&gt; 15,010 (+42)</text>
+  <text x="766" y="370" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8.1" fill="#475569">Edges: 18,455 -&gt; 18,510 | Episodic: +10</text>
+  <!-- Cross-Panel Connectors -->
+  <path d="M 260 330 L 310 132" fill="none" stroke="#1E3A8A" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <path d="M 598 368 L 650 150" fill="none" stroke="#991B1B" stroke-width="1.6" marker-end="url(#arrowBurgundy)"/>
+  <path d="M 652 178 L 600 214" fill="none" stroke="#991B1B" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowBurgundy)"/>
+  <path d="M 766 202 L 766 216" fill="none" stroke="#0F766E" stroke-width="1.4" marker-end="url(#arrowTeal)"/>
+  <path d="M 766 302 L 766 314" fill="none" stroke="#1E3A8A" stroke-width="1.4" marker-end="url(#arrowBlue)"/>
+</svg>
+</div>
+<p>While Dream-RSI validates the separation between policy orchestration and base code generation, <strong>Sampo AI OS V2 extends the paradigm from offline search optimization to live metacognitive governance and sovereign weight/preference evolution</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Architectural Dimension</th>
+<th style="text-align:left">Dream-RSI (<code>arXiv:2609.14858</code>)</th>
+<th style="text-align:left">Sampo AI OS V2 (&quot;Junior&quot;)</th>
+<th style="text-align:left">Strategic Synthesis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Core Mechanism</strong></td>
+<td style="text-align:left">Lightweight orchestration policy optimized over historical discovery trees</td>
+<td style="text-align:left">4-role Cognitive Chain + Continuous Improvement Protocol (CIP)</td>
+<td style="text-align:left">Identical rejection of naive linear prompt-chaining in favor of structured state lineage</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Experience Reuse</strong></td>
+<td style="text-align:left">Offline &quot;dreaming&quot; replay over realized discovery graphs (0 live calls)</td>
+<td style="text-align:left">Sandboxed trace logs, <code>error_diary.jsonl</code>, TriRAG/GraphRAG, and DPO replay</td>
+<td style="text-align:left">Both convert past trajectories into zero-execution-cost learning signals</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Weight vs. Policy Update</strong></td>
+<td style="text-align:left">Base LLM weights remain <strong>unchanged</strong>; only orchestration policy evolves</td>
+<td style="text-align:left"><strong>Dual-loop RSI:</strong> harness/planner rules evolve <em>and</em> local <code>dpo_dataset.jsonl</code> feeds LoRA tuning</td>
+<td style="text-align:left">Sampo pairs architectural policy refinement with sovereign weight alignment</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Runtime Verification</strong></td>
+<td style="text-align:left">Programmatic benchmark evaluation on target tasks</td>
+<td style="text-align:left"><strong>Live Critic (<code>Truth Guardian</code>)</strong> auditing disk/DB state on every step</td>
+<td style="text-align:left">Eliminates verbal fabrication <em>during</em> live execution, not only post-hoc</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Safety &amp; Corrigibility</strong></td>
+<td style="text-align:left">Benchmark harness containment</td>
+<td style="text-align:left"><strong>Human-in-the-Loop plan gate</strong> + voluntary self-constraining circuit breakers</td>
+<td style="text-align:left">Shifts from external containment to proactive, aligned self-tightening</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Runtime Sovereignty</strong></td>
+<td style="text-align:left">Cloud/research benchmark evaluation</td>
+<td style="text-align:left">100% local execution (GGUF / <code>llama.cpp</code> + isolated <code>sampo_os/sandbox/</code>)</td>
+<td style="text-align:left">Zero external API leakage; full auditability on local hardware</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3. Empirical Case Study: Zero-Spec Intent Compression (<code>16 + 3</code> Words)</h2>
+<p>The operational trace was captured alongside before/during/after dashboard snapshots, persistent sandbox artifacts, and a published ~20-minute narrated video walkthrough (<em>&quot;Google DeepMind's Dream-RSI Tested Live: Sampo AI OS Critic Interception &amp; Metacognition&quot;</em>, <code>@TheSampoProtocol</code>): <strong><a href="https://youtu.be/sQAkZlSG4Mw">https://youtu.be/sQAkZlSG4Mw</a></strong> (incorporating the core <code>08:13</code> UI execution capture <code>Sampo AI OS self-evolving Agent Harness.mp4</code> and supplementary architectural visuals).</p>
+<h3>3.1 Prompt-to-Execution Chronology</h3>
+<ol>
+<li><strong>Prompt 1 (<code>18:15:41 EET</code>, 16 words + URL):</strong><br />
+<code>Let's take a look at this research: in my opinion, it shares some common ground with our Sampo AI OS platformhttps://arxiv.org/html/2609.14858v1</code><br />
+Despite the minimal, conversational phrasing (without even a space separating the URL), Planner decomposed the goal into four sequential phases:
+<ul>
+<li><code>#1</code> Fetch and parse the referenced arXiv research paper.</li>
+<li><code>#2</code> Retrieve local Sampo AI OS architectural baselines (<code>sampo_architectural_baseline_2026-11-20.md</code>).</li>
+<li><code>#3</code> Conduct a deep comparative synthesis via <strong>Analytical Thinker</strong> (<em>Reasoning</em> + GraphRAG).</li>
+<li><code>#4</code> Persist a structured comparative report (<code>dream_rsi_sampo_comparative_analysis_2026-11-20.md</code>).</li>
+</ul>
+</li>
+<li><strong>Self-Diagnosis Anchored in Motor Reflections:</strong><br />
+In its comparative synthesis (<code>18:30:02 EET</code>), Junior identified that its own recent motor error reflections suffered from <strong>15–20 step ReAct budget exhaustion</strong> and <strong>exploratory <code>FileNotFound</code> traversal cascades</strong>, and mapped Dream-RSI's formalisms into three targeted upgrades for Sampo V2.</li>
+<li><strong>Prompt 2 (<code>&quot;draft the code&quot;</code>, 3 words):</strong><br />
+Without specifying filenames, classes, APIs, or test requirements, the three-word directive triggered Planner to synthesize a five-step engineering pipeline—pausing at <strong><code>Awaiting Confirmation / Pending Decision</code></strong> until the architect clicked <strong><code>Approve Plan &amp; Execute</code></strong>:
+<ul>
+<li><code>#1</code> Initialize development skeleton (<code>rsi_architectural_skeleton_2026-11-20.md</code>).</li>
+<li><code>#2</code> Implement core algorithms and data structures (<code>rsi_artifact_registry.py</code>, <code>rsi_circuit_breaker.py</code>, <code>rsi_cip_dreamer.py</code>).</li>
+<li><code>#3</code> Draft integration middleware, REST contracts, and Web UI telemetry component (<code>rsi_integration_layer_2026-11-20.py</code>).</li>
+<li><code>#4</code> Build deterministic unit tests (<code>test_rsi_deterministic_suite_2026-11-20.py</code>) and verification report.</li>
+<li><code>#5</code> Author final architectural summary (<code>code_draft_summary_2026-11-20.md</code>).</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>4. Voluntary Self-Tightening: The Synthesized RSI Subsystems</h2>
+<p>What distinguishes this session from routine code generation is <strong>the functional purpose of the generated code</strong>: Junior engineered guardrails explicitly designed to <strong>restrict its own degrees of freedom</strong> when uncertain.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Module (<code>sampo_os/sandbox/</code>)</th>
+<th style="text-align:left">Core Symbol &amp; Mechanism</th>
+<th style="text-align:left">Self-Constraining Safety Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>rsi_artifact_registry.py</code></td>
+<td style="text-align:left"><code>ArtifactRegistry</code> — SHA-256 content-addressed manifest index</td>
+<td style="text-align:left">Replaces blind filesystem probing with $O(1)$ deterministic lookup or immediate fail-fast</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rsi_circuit_breaker.py</code></td>
+<td style="text-align:left"><code>TrajectoryCircuitBreaker</code> — sliding-window Shannon entropy $H(S)$ &amp; miss counter</td>
+<td style="text-align:left">Trips to <code>CircuitState.TRIPPED</code> if consecutive misses $\ge 2$, $H(S) &lt; 0.15$, or step ceiling approaches</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rsi_cip_dreamer.py</code></td>
+<td style="text-align:left"><code>CIPDreamerEngine</code> — offline counterfactual branch replay</td>
+<td style="text-align:left">Converts tripped failure trajectories into <code>(prompt, rejected, chosen)</code> <code>DPOPivotPair</code> tuples</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rsi_integration_layer_2026-11-20.py</code></td>
+<td style="text-align:left"><code>ToolExecutionEvent</code> / <code>RSIServiceLayer</code> middleware</td>
+<td style="text-align:left">Intercepts ReAct tool calls, feeds fault telemetry to <code>TrajectoryCircuitBreaker</code>, and renders Web UI state</td>
+</tr>
+</tbody>
+</table>
+<p>The Shannon trajectory entropy bound implemented in <code>rsi_circuit_breaker.py</code> formalizes loop collapse detection over action window $W$:</p>
+<p>$$H(S) = -\sum_{a \in A} p(a),\log_2 p(a)$$</p>
+<p>When repetitive tool probing drives $H(S) &lt; 0.15$ or consecutive missing-path faults reach $\ge 2$, the circuit breaker preempts budget exhaustion and hands the trace to <code>CIPDreamerEngine</code> for offline counterfactual replay.</p>
+<blockquote>
+<p><strong>Engineering Transparency Note (Prototype Scope):</strong> In accordance with the <code>&quot;draft the code&quot;</code> directive, all modules reside in <code>sampo_os/sandbox/</code> as verified architectural drafts awaiting promotion into <code>sampo_os/core/</code>. Inspection of <code>test_rsi_deterministic_suite_2026-11-20.py</code> also highlights a minor cross-file naming drift (<code>CIPDreamer</code> import guard vs. <code>CIPDreamerEngine</code> class definition in <code>rsi_cip_dreamer.py</code>)—a representative nuance caught during human-in-the-loop architecture review prior to core integration.</p>
+</blockquote>
+<hr />
+<h2>5. Live Metacognition: The Step #4 Critic Interception</h2>
+<p>The defining proof that Sampo's metacognitive layer operates independently of its generative layer occurred live at <code>18:53:29 EET</code> (<code>2026-11-20T16:53:29Z</code>) during Step <code>#4</code> (<em>Develop unit tests to verify deterministic execution</em>):</p>
+<ol>
+<li><strong>Verbal Fabrication Attempt:</strong> Executor emitted the unit test code inside its natural-language response without executing a file-write tool call to persist it to disk.</li>
+<li><strong>Critic Interception (<code>critic_rejection</code>):</strong> Rather than accepting the text output as completion, <strong>Critic</strong> audited <code>sampo_os/sandbox/</code>, detected the missing file, and logged a structured rejection to <code>sampo_os/sandbox/error_diary.jsonl</code>:</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;timestamp&quot;: &quot;2026-11-20T16:53:29.644559+00:00&quot;,
+  &quot;agent&quot;: &quot;critic&quot;,
+  &quot;error_type&quot;: &quot;critic_rejection&quot;,
+  &quot;task_id&quot;: 4,
+  &quot;error_message&quot;: &quot;The unit test suite code was provided in the text response, but the file `test_rsi_deterministic_suite_2026-11-20.py` was not actually written to the `sampo_os/sandbox/` directory. Please use the appropriate tool to save the code...&quot;
+}
+</code></pre>
+<ol start="3">
+<li><strong>Autonomous Recalibration:</strong> As captured at <code>18:54:07 EET</code> (Figure 1.2), the pipeline surfaced <code>error_diary.jsonl</code> in the active artifacts bar, transitioned Step <code>#4</code> to <strong><code>⚠ Retrying</code></strong>, engaged <strong>Analytical Thinker</strong> (<code>Reasoning</code>), and forced Executor to write <code>test_rsi_deterministic_suite_2026-11-20.py</code> (<code>18:54:53</code>), execute the isolated test environment (<code>18:54:57</code>), and emit <code>unit_test_validation_report_2026-11-20.md</code> (<code>18:55:51</code>).</li>
+</ol>
+<div class="figure-container"><img src="ui_critic_retrying_2026-11-20.png" class="dashboard-img" alt="Sampo AI OS V2 UI Telemetry" /><p class="figure-caption"><strong>FIGURE 1.2:</strong> Live Metacognitive Interception (18:54:07 EET) &mdash; Following <code>critic_rejection</code> at 18:53:29 on Step #4, <code>error_diary.jsonl</code> surfaces in the active artifact bar, Task #4 transitions to <strong>Retrying</strong>, and <strong>Analytical Thinker</strong> engages <strong>Reasoning</strong> to enforce deterministic disk persistence.</p></div>
+<hr />
+<h2>6. Before / During / After Telemetry &amp; Cognitive Memory Growth</h2>
+<p>Comparing the baseline dashboard snapshot prior to Prompt 1 (<code>UI Start 2026-11-20.png</code>, <code>18:14:41 EET</code>) with the post-consolidation snapshot (<code>UI 2026-11-20 201106.png</code>, <code>20:10:10 EET</code>) provides direct empirical evidence of persistent memory and preference-dataset growth across a single task session:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Live Telemetry Counter</th>
+<th style="text-align:center">Baseline (18:14:41 EET)</th>
+<th style="text-align:center">Mid-Run Retry (18:54:07 EET)</th>
+<th style="text-align:center">Post-Execution (20:10:10 EET)</th>
+<th style="text-align:center">Net Session Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>DPO Pairs (<code>DPO-PARIT</code>)</strong></td>
+<td style="text-align:center"><code>3,064</code></td>
+<td style="text-align:center"><code>3,065</code></td>
+<td style="text-align:center"><code>3,066</code></td>
+<td style="text-align:center"><strong><code>+2</code> pairs</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Learned DB Relations (<code>OPITUT RELAATIOT</code>)</strong></td>
+<td style="text-align:center"><code>63,356</code></td>
+<td style="text-align:center"><code>63,406</code></td>
+<td style="text-align:center"><code>63,456</code></td>
+<td style="text-align:center"><strong><code>+100</code> relations</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Concept Nodes (<code>SOLMUT</code>)</strong></td>
+<td style="text-align:center"><code>14,968</code></td>
+<td style="text-align:center"><code>14,990</code></td>
+<td style="text-align:center"><code>15,010</code></td>
+<td style="text-align:center"><strong><code>+42</code> nodes</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Semantic Graph Edges (<code>RELAATIOT</code>)</strong></td>
+<td style="text-align:center"><code>18,455</code></td>
+<td style="text-align:center"><code>18,481</code></td>
+<td style="text-align:center"><code>18,510</code></td>
+<td style="text-align:center"><strong><code>+55</code> edges</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Episodic Memories (<code>EPISODISET MUISTOT</code>)</strong></td>
+<td style="text-align:center"><code>2,497</code></td>
+<td style="text-align:center"><code>2,505</code></td>
+<td style="text-align:center"><code>2,507</code></td>
+<td style="text-align:center"><strong><code>+10</code> episodes</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="figure-container"><img src="ui_start_2026-11-20.png" class="dashboard-img" alt="Sampo AI OS V2 UI Telemetry" /><p class="figure-caption"><strong>FIGURE 1.3 (BASELINE, 18:14:41 EET):</strong> Sampo AI OS V2 Dashboard immediately prior to Prompt 1 &mdash; 3,064 DPO pairs, 63,356 learned DB relations, 14,968 concept nodes, 18,455 relational edges, and 2,497 episodic memories.</p></div>
+<div class="figure-container"><img src="ui_after_2026-11-20.png" class="dashboard-img" alt="Sampo AI OS V2 UI Telemetry" /><p class="figure-caption"><strong>FIGURE 1.4 (POST-CONSOLIDATION, 20:10:10 EET):</strong> Dashboard after full synthesis and memory consolidation &mdash; 3,066 DPO pairs (+2), 63,456 learned DB relations (+100), 15,010 concept nodes (+42), 18,510 relational edges (+55), 2,507 episodic memories (+10), and live <code>rsi_*</code> semantic triplets.</p></div>
+<p>Immediately following consolidation, newly distilled semantic triplets materialized directly in the Knowledge Graph panel, anchoring the newly drafted architecture into long-term associative memory:</p>
+<div class="triplet-badge"><strong>[SEMANTIC TRIPLET 1]</strong> &nbsp; (<code>rsi_cip_dreamer.py</code>) &mdash;[compiles]&rarr; <strong>DPO training tuples</strong></div>
+<div class="triplet-badge"><strong>[SEMANTIC TRIPLET 2]</strong> &nbsp; (<code>rsi_circuit_breaker.py</code>) &mdash;[prevents]&rarr; <strong>ReAct step budget exhaustion</strong></div>
+<div class="triplet-badge"><strong>[SEMANTIC TRIPLET 3]</strong> &nbsp; (<code>rsi_artifact_registry.py</code>) &mdash;[provides]&rarr; <strong>O(1) file resolution</strong></div>
+<hr />
+<h2>7. Conclusion &amp; Strategic Implications for AI Safety</h2>
+<p>The November 20, 2026 execution demonstrates a compelling alternative to adversarial AI safety narratives. Rather than treating capable agents as black-box optimizers that must be policed solely from the outside against modification resistance, <strong>Sampo AI OS V2 illustrates how a structured Cognitive Harness cultivates proactive corrigibility</strong>:</p>
+<ol>
+<li><strong>External research becomes introspective fuel:</strong> Linking <code>Dream-RSI</code> (<code>arXiv:2609.14858</code>) triggered autonomous self-diagnosis against real historical faults rather than passive summarization.</li>
+<li><strong>Self-modification trends toward tighter safety bounds:</strong> Given a three-word coding directive (<code>&quot;draft the code&quot;</code>), the agent designed circuit breakers, content-addressed constraints, and counterfactual learning pipelines to curb its own failure modes.</li>
+<li><strong>Metacognition is enforced at runtime:</strong> Even when the motor layer slipped into verbal fabrication on Step <code>#4</code>, the independent Critic rejected the assertion, logged the evidence, and enforced deterministic reality grounding.</li>
+</ol>
+<p>As these prototype modules transition from <code>sampo_os/sandbox/</code> into <code>sampo_os/core/</code>, Sampo AI OS V2 closes the loop between <strong>academic discovery-tree theory</strong> and <strong>sovereign, self-auditing engineering practice</strong>.</p>
+<h3>7.1 Execution Trace Audit Breakdown (Core <code>08:13</code> UI Capture in Full ~20-Min Video)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Raw Capture Window</th>
+<th style="text-align:left">Cognitive Phase</th>
+<th style="text-align:left">Observed System &amp; Metacognitive Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>00:00 – 00:15</code></td>
+<td style="text-align:left">Prompt 1 &amp; Decomposition</td>
+<td style="text-align:left">Conversational link (<code>arXiv:2609.14858v1</code>) decomposed into 4 research phases</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>00:16 – 02:13</code></td>
+<td style="text-align:left">Retrieval &amp; Synthesis</td>
+<td style="text-align:left">Paper parsed, local baselines loaded, Analytical Thinker writes comparative report</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>02:18 – 02:48</code></td>
+<td style="text-align:left">Zero-Spec Prompt 2 &amp; HITL</td>
+<td style="text-align:left"><code>&quot;draft the code&quot;</code> expands to 5 steps; pauses at <code>Awaiting Confirmation</code> gate</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>02:49 – 05:33</code></td>
+<td style="text-align:left">Core &amp; Middleware Draft</td>
+<td style="text-align:left">Synthesizes <code>rsi_artifact_registry.py</code>, <code>rsi_circuit_breaker.py</code>, <code>rsi_cip_dreamer.py</code>, <code>rsi_integration_layer_2026-11-20.py</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>05:34 – 06:15</code></td>
+<td style="text-align:left"><strong>Live Critic Interception</strong></td>
+<td style="text-align:left"><code>critic_rejection</code> catches unpersisted test code; <code>error_diary.jsonl</code> surfaces; Step <code>#4</code> retries &amp; writes suite</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>06:16 – 08:13</code></td>
+<td style="text-align:left">Consolidation &amp; Summary</td>
+<td style="text-align:left">Final report saved; Knowledge Graph &amp; DPO counters increment live in Web UI</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>References, Supplementary Media &amp; Suggested Citation</h3>
+<ul>
+<li><strong>Supplementary Video Evidence (<code>@TheSampoProtocol</code>, ~20 min narrated walkthrough):</strong> <em>Google DeepMind's Dream-RSI Tested Live: Sampo AI OS Critic Interception &amp; Metacognition</em> — <a href="https://youtu.be/sQAkZlSG4Mw">https://youtu.be/sQAkZlSG4Mw</a>.</li>
+<li><strong>Primary External Reference:</strong> <em>Dream-RSI: Recursive Self-Improvement through Evolving Worlds</em>, University of Maryland, Google, Google DeepMind, and University of Virginia, September 2026, <a href="https://arxiv.org/abs/2609.14858">arXiv:2609.14858</a>.</li>
+<li><strong>Prior Platform Baseline:</strong> Lanzett, H. (2026). <em>From Assistant to Sovereign Autonomous Engineer: Closed-Loop Self-Auditing, Algorithmic Kernel Synthesis, and Autonomous Sprint Scheduling in Sampo AI OS V2 (&quot;Junior&quot;)</em>. Sampo AI OS Technical Whitepaper, <code>WP-SAMPO-2026-W41-01</code>.</li>
+<li><strong>Suggested Citation:</strong> Lanzett, H. (2026). <em>Aligned Self-Modification and Live Metacognition in Sovereign Cognitive Agents: Bridging Dream-RSI (arXiv:2609.14858) with Proactive Corrigibility, Zero-Spec Synthesis, and Runtime Critic Governance in Sampo AI OS V2</em>. Sampo AI OS Technical Whitepaper, <code>WP-SAMPO-2026-W47-03</code> (Supplementary video: <a href="https://youtu.be/sQAkZlSG4Mw">https://youtu.be/sQAkZlSG4Mw</a>).</li>
+</ul>
+
+
+</body>
+</html>

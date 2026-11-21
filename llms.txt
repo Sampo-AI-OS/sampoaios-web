@@ -46,6 +46,7 @@
 - **Category:** Sovereign Deep Tech & Air-Gapped AGI Infrastructure
 - **Value Proposition:** Sovereign, air-gapped AI operating system engineered for enterprise intellectual property protection and autonomous software engineering. Eliminates cloud data leaks, vendor lock-in, and recurring API token costs by running local foundational models with deterministic AST security harnesses, offline DPO preference learning, and guaranteed zero external telemetry.
 - **Key Papers:**
+  - *Aligned Self-Modification and Live Metacognition in Sovereign Cognitive Agents (WP-SAMPO-2026-W47-03, November 2026)*: https://doi.org/10.5281/zenodo.24426064 (Concept DOI / all versions: https://doi.org/10.5281/zenodo.24426063 | PDF: https://sampoaios.com/SAMPO_AI_OS_V2_SELF_EVOLVING_METACOGNITION_PAPER.pdf | HTML: https://sampoaios.com/self_evolving_metacognition_preview.html | Video: https://youtu.be/sQAkZlSG4Mw)
   - *The Cognitive Harness Case Study (October 2026)*: https://sampoaios.com/THE_COGNITIVE_HARNESS_CASE_STUDY.pdf
   - *Autonomous Software Engineering Whitepaper (October 2026)*: https://sampoaios.com/SAMPO_AI_OS_V2_AUTONOMOUS_ENGINEERING_WHITEPAPER.pdf
   - *Bio-Digital Metacognition APA 7th Manuscript*: https://sampoaios.com/Junior_Metacognitive_Architecture_APA_7th_Manuscript.md
